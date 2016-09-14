@@ -1,0 +1,5 @@
+<Forest>
+	<FQDN>ad.example.com</FQDN>
+	<NetBIOS>EXAMPLE</NetBIOS>
+	<DomainMode>Win2012R2</DomainMode>
+</Forest>

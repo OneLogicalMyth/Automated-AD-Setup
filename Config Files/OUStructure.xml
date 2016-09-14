@@ -1,0 +1,59 @@
+<OUStructure>
+	<OU Name="Administrative" Description="">
+		<OU Name="RBAC" Description="Role Based Access Control">
+			<OU Name="Roles" Description="This holds the administrative roles for the domain" />
+			<OU Name="Permissions" Description="Each sub OU holds permissive groups for that application/service">
+				<OU Name="Delegated Rights" Description="Rights delegated to an OU" />
+				<OU Name="Local Rights" Description="These groups are added to it's respective local group on the computer" />
+			</OU>
+		</OU>
+		<OU Name="New Machines" Description="Any computer not joined without being prestaged is placed here for security" />
+		<OU Name="Admins" Description="Each sub OU defines a role">
+			<OU Name="Sys Admins" Description="Accounts with full admin access over the domain" />
+		</OU>
+		<OU Name="Service Accounts" Description="Where a group managed account is not possible create service accounts here">
+			<OU Name="Deactivated" Description="Deactivated service accounts due to inactivity" />
+		</OU>
+		<OU Name="Local Groups">
+			<OU Name="Administrators" />
+			<OU Name="Event Log Readers" />
+			<OU Name="Performance Log Users" />
+			<OU Name="Remote Desktop Users" />
+			<OU Name="Log on Locally" />
+		</OU>
+	</OU>
+	<OU Name="Live">
+		<OU Name="Servers">
+			<OU Name="Management" />
+		</OU>
+		<OU Name="Client Devices">
+			<OU Name="Desktops" />
+			<OU Name="Laptops" />
+			<OU Name="Mobile Devices" />
+			<OU Name="Thin Clients" />
+			<OU Name="Virtual Desktops" />
+			<OU Name="Deactivated"/>
+		</OU>
+		<OU Name="Groups" />
+		<OU Name="People">
+			<OU Name="Deactivated" />
+		</OU>
+	</OU>
+	<OU Name="Test">
+		<OU Name="Servers">
+			<OU Name="Management" />
+		</OU>
+		<OU Name="Client Devices">
+			<OU Name="Desktops" />
+			<OU Name="Laptops" />
+			<OU Name="Mobile Devices" />
+			<OU Name="Thin Clients" />
+			<OU Name="Virtual Desktops" />
+			<OU Name="Deactivated"/>
+		</OU>
+		<OU Name="Groups" />
+		<OU Name="People">
+			<OU Name="Deactivated" />
+		</OU>
+	</OU>
+</OUStructure>

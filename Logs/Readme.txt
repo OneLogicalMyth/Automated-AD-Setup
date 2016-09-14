@@ -1,0 +1,1 @@
+Log files will be stored here and output from scripts.

@@ -1,0 +1,26 @@
+<ADSites>
+	<Site>
+		<Name>Site01</Name>
+		<Location>Paris</Location>
+		<Description>Primary Site</Description>
+		<Subnets>
+			<Subnet>
+				<IP>10.120.0.0/16</IP>
+				<Location>London</Location>
+				<Description>Site01 Server Subnet</Description>
+			</Subnet>
+		</Subnets>
+	</Site>
+	<Site>
+		<Name>Site02</Name>
+		<Location>Paris</Location>
+		<Description>Secondary Site</Description>
+		<Subnets>
+			<Subnet>
+				<IP>10.110.0.0/16</IP>
+				<Location>Paris</Location>
+				<Description>Site02 Server Subnet</Description>
+			</Subnet>
+		</Subnets>
+	</Site>
+</ADSites>

@@ -1,0 +1,24 @@
+<RBACGroups>
+	<Roles>
+		<Role>
+			<Name>ROLE-System_Administrator</Name>
+			<Description></Description>
+			<Location></Location>
+		</Role>
+		<Role>
+			<Name>ROLE-Desktop_Administrator</Name>
+			<Description></Description>
+			<Location></Location>
+		</Role>
+		<Role>
+			<Name>ROLE-Service_Desk</Name>
+			<Description></Description>
+			<Location></Location>
+		</Role>
+	</Roles>
+	<Permissions>
+	</Permissions>
+	<Managers>
+	</Managers>
+</RBACGroups>
+

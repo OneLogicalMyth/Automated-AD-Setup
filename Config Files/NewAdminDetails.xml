@@ -1,0 +1,13 @@
+<NewAdminDetails>
+	<Office>London Office</Office>
+	<StreetAddress>88 Guild Street</StreetAddress>
+	<City>London</City>
+	<PostalCode>SE17 1HA</PostalCode>
+	<Country>GB</Country>
+	<EmailAddress>SysAdmin@gmail.com</EmailAddress>
+	<OfficePhone>077 7611 0630</OfficePhone>
+	<Title>System Administrator</Title>
+	<Company>Example Inc.</Company>
+	<Description></Description>
+	<HomePage></HomePage>
+</NewAdminDetails>

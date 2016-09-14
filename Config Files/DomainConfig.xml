@@ -1,0 +1,5 @@
+<DomainConfig>
+	<DefaultComputerOU>OU=New Machines,OU=Administrative,{{DomainDN}}</DefaultComputerOU>
+	<DefaultUserOU>OU=People,OU=Live,{{DomainDN}}</DefaultUserOU>
+	<DisplayNameFormat>{{LastName}}, {{FirstName}}</DisplayNameFormat>
+</DomainConfig>

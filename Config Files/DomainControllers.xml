@@ -1,0 +1,36 @@
+<DomainControllers>
+	<DC>
+		<!-- Must be the primary DC ! -->
+		<ID>1</ID>
+		<ComputerName>EXAMPLE-DC-01</ComputerName>
+		<Description>First Domain Controller at Site01</Description>
+		<DNSSuffix>example.local</DNSSuffix>
+		<DNSServers>
+			<IP>192.168.1.3</IP>
+			<IP>192.168.1.2</IP>
+			<IP>192.168.1.1</IP>
+		</DNSServers>
+	</DC>
+	<DC>
+		<ID>2</ID>
+		<ComputerName>EXAMPLE-DC-02</ComputerName>
+		<Description>Second Domain Controller at Site01</Description>
+		<DNSSuffix>example.local</DNSSuffix>
+		<DNSServers>
+			<IP>192.168.1.1</IP>
+			<IP>192.168.1.2</IP>
+			<IP>192.168.1.3</IP>
+		</DNSServers>
+	</DC>
+	<DC>
+		<ID>3</ID>
+		<ComputerName>EXAMPLE-DC-03</ComputerName>
+		<Description>Third Domain Controller at Site01</Description>
+		<DNSSuffix>example.local</DNSSuffix>
+		<DNSServers>
+			<IP>192.168.1.2</IP>
+			<IP>192.168.1.1</IP>
+			<IP>192.168.1.3</IP>
+		</DNSServers>
+	</DC>
+</DomainControllers>

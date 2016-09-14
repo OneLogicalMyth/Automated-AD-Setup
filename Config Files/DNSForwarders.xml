@@ -1,0 +1,8 @@
+<DNSForwarders>
+	<!-- Google DNS Servers -->
+	<IP>8.8.8.8</IP>
+	<IP>8.8.4.4</IP>
+	<!-- Open DNS Servers -->
+	<IP>208.67.222.222</IP>
+	<IP>208.67.220.220</IP>
+</DNSForwarders>
