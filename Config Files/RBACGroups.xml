@@ -21,6 +21,7 @@
 		 	<Group>PERM-TEST-Group_Management-FCGO</Group>
 			<Group>PERM-TEST-People_Management-FCUO</Group>
 			<Group>PERM-TEST-Client_Device_Management-FCCO</Group>
+		 </MemberOf>		 
       </Group>
       <Group>
          <Name>ROLE-Service_Desk</Name>
@@ -35,6 +36,7 @@
          <Name>ROLE-System_Developer</Name>
          <Description>Full control over test only for users, client devices, servers and groups.</Description>
          <Location>OU=Roles,OU=RBAC,OU=Administrative</Location>
+		 <ManagedBy>ROLE-MAN-System_Developer</ManagedBy>
 		 <MemberOf>
 		 	<Group>PERM-TEST-Group_Management-FCGO</Group>
 			<Group>PERM-TEST-People_Management-FCUO</Group>
