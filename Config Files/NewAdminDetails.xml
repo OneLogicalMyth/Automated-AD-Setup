@@ -10,4 +10,5 @@
 	<Company>Example Inc.</Company>
 	<Description></Description>
 	<HomePage></HomePage>
+	<Loction>OU=System Administrator,OU=Admins,OU=Administrative</Loction>
 </NewAdminDetails>

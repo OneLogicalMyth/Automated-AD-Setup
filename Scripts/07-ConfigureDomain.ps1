@@ -47,6 +47,8 @@ $NewAdminDetails = @{
 	Company       = $AdminDetails.Company
 	Description   = $AdminDetails.Description
 	HomePage      = $AdminDetails.HomePage
+	GivenName     = $AdminName.GivenName
+	Surname       = $AdminName.Surname
     
     UserPrincipalName = "$AdminUsername@$DomainFQDN"
     SamAccountName    = $AdminUsername
@@ -56,5 +58,8 @@ $NewAdminDetails = @{
 $Empties = $NewAdminDetails.Keys | Where-Object { [string]::IsNullOrEmpty($NewAdminDetails.$_) }
 $Empties | foreach{ $NewAdminDetails.$_ = $null }
 
+#Rename the administartor account and move it to the desired location
+Get-ADUser $AdminAccount | Set-ADUser @NewAdminDetails | Move-ADObject -TargetPath "$($AdminDetails.Location),$DomainDN"
 
-Get-ADUser $AdminAccount | Set-ADUser @NewAdminDetails
+#Enable the Recycle Bin
+Enable-ADOptionalFeature "Recycle Bin Feature" -Scope ForestOrConfigurationSet -Target (Get-ADDomain).DnsRoot.ToString() -Confirm:$false

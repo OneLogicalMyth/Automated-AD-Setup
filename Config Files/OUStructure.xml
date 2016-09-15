@@ -1,5 +1,16 @@
 <OUStructure>
 	<OU Name="Administrative" Description="">
+			<DelegatedRights>
+				<!-- Grants full control over the administrative OU -->
+				<DelegatedRight>
+				 	<Identity>PERM-Administration_OU-FC</Identity>
+					<ADRights>GenericAll</ADRights>
+					<Type>Allow</Type>
+					<ObjectType></ObjectType>
+					<InheritanceType>Descendents</InheritanceType>
+					<InheritedObjectType>NULL</InheritedObjectType>
+				 </DelegatedRight>
+			</DelegatedRights>
 		<OU Name="RBAC" Description="Role Based Access Control">
 			<OU Name="Roles" Description="This holds the administrative roles for the domain" />
 			<OU Name="Permissions" Description="Each sub OU holds permissive groups for that application/service">
@@ -7,11 +18,54 @@
 				<OU Name="Local Rights" Description="These groups are added to it's respective local group on the computer" />
 			</OU>
 		</OU>
-		<OU Name="New Machines" Description="Any computer not joined without being prestaged is placed here for security" />
+		<OU Name="New Machines" Description="Any computer not joined without being prestaged is placed here for security">
+			<DelegatedRights>
+				<DelegatedRight>
+				 	<Identity>PERM-New_Computers_OU-FCCO</Identity>
+					<ADRights>GenericAll</ADRights>
+					<Type>Allow</Type>
+					<ObjectType></ObjectType>
+					<InheritanceType>Descendents</InheritanceType>
+					<InheritedObjectType>computer</InheritedObjectType>
+				 </DelegatedRight>
+			</DelegatedRights>
+		</OU>
 		<OU Name="Admins" Description="Each sub OU defines a role">
-			<OU Name="Sys Admins" Description="Accounts with full admin access over the domain" />
+			<DelegatedRights>
+				<DelegatedRight>
+				 	<Identity>PERM-Admin_Account_Management-FCUO</Identity>
+					<ADRights>GenericAll</ADRights>
+					<Type>Allow</Type>
+					<ObjectType></ObjectType>
+					<InheritanceType>Descendents</InheritanceType>
+					<InheritedObjectType>user</InheritedObjectType>
+				 </DelegatedRight>
+				<DelegatedRight>
+				 	<Identity>PERM-Admin_Account_Management-FCUO</Identity>
+					<ADRights>CreateChild,DeleteChild</ADRights>
+					<Type>Allow</Type>
+					<ObjectType>user</ObjectType>
+					<InheritanceType>Descendents</InheritanceType>
+					<InheritedObjectType>organizationalunit</InheritedObjectType>
+				 </DelegatedRight>
+			</DelegatedRights>
+			<OU Name="System Administrator" Description="Accounts with full admin access over the domain" />
+			<OU Name="Desktop Administrator" Description="Accounts with full admin access over the domain" />
+			<OU Name="Service Desk" Description="Accounts with full admin access over the domain" />
+			<OU Name="System Developer" Description="Accounts with full admin access over the domain" />
 		</OU>
 		<OU Name="Service Accounts" Description="Where a group managed account is not possible create service accounts here">
+			<DelegatedRights>
+				<!-- grants service accounts the ability to update their SPN, S-1-5-10 is SELF -->
+				<DelegatedRight>
+				 	<Identity>S-1-5-10</Identity>
+					<ADRights>WriteProperty</ADRights>
+					<Type>Allow</Type>
+					<ObjectType>servicePrincipalName</ObjectType>
+					<InheritanceType>Descendents</InheritanceType>
+					<InheritedObjectType>user</InheritedObjectType>
+				 </DelegatedRight>
+			</DelegatedRights>
 			<OU Name="Deactivated" Description="Deactivated service accounts due to inactivity" />
 		</OU>
 		<OU Name="Local Groups">
@@ -24,9 +78,45 @@
 	</OU>
 	<OU Name="Live">
 		<OU Name="Servers">
+			<DelegatedRights>
+				<DelegatedRight>
+					<Identity>PERM-LIVE-Server_Management-FCCO</Identity>
+					<ADRights>GenericAll</ADRights>
+					<Type>Allow</Type>
+					<ObjectType></ObjectType>
+					<InheritanceType>Descendents</InheritanceType>
+					<InheritedObjectType>computer</InheritedObjectType>
+				</DelegatedRight>
+				<DelegatedRight>
+					<Identity>PERM-LIVE-Server_Management-FCCO</Identity>
+					<ADRights>CreateChild,DeleteChild</ADRights>
+					<Type>Allow</Type>
+					<ObjectType>computer</ObjectType>
+					<InheritanceType>Descendents</InheritanceType>
+					<InheritedObjectType>organizationalunit</InheritedObjectType>
+				</DelegatedRight>
+			</DelegatedRights>
 			<OU Name="Management" />
 		</OU>
 		<OU Name="Client Devices">
+			<DelegatedRights>
+				<DelegatedRight>
+					<Identity>PERM-LIVE-Client_Device_Management-FCCO</Identity>
+					<ADRights>GenericAll</ADRights>
+					<Type>Allow</Type>
+					<ObjectType></ObjectType>
+					<InheritanceType>Descendents</InheritanceType>
+					<InheritedObjectType>computer</InheritedObjectType>
+				</DelegatedRight>
+				<DelegatedRight>
+					<Identity>PERM-LIVE-Client_Device_Management-FCCO</Identity>
+					<ADRights>CreateChild,DeleteChild</ADRights>
+					<Type>Allow</Type>
+					<ObjectType>computer</ObjectType>
+					<InheritanceType>Descendents</InheritanceType>
+					<InheritedObjectType>organizationalunit</InheritedObjectType>
+				</DelegatedRight>
+			</DelegatedRights>
 			<OU Name="Desktops" />
 			<OU Name="Laptops" />
 			<OU Name="Mobile Devices" />
@@ -34,16 +124,137 @@
 			<OU Name="Virtual Desktops" />
 			<OU Name="Deactivated"/>
 		</OU>
-		<OU Name="Groups" />
+		<OU Name="Groups">
+			<DelegatedRights>
+				<DelegatedRight>
+				 	<Identity>PERM-LIVE-Group_Management-FCGO</Identity>
+					<ADRights>GenericAll</ADRights>
+					<Type>Allow</Type>
+					<ObjectType></ObjectType>
+					<InheritanceType>Descendents</InheritanceType>
+					<InheritedObjectType>user</InheritedObjectType>
+				 </DelegatedRight>
+				<DelegatedRight>
+				 	<Identity>PERM-LIVE-Group_Management-FCGO</Identity>
+					<ADRights>CreateChild,DeleteChild</ADRights>
+					<Type>Allow</Type>
+					<ObjectType>user</ObjectType>
+					<InheritanceType>All</InheritanceType>
+					<InheritedObjectType></InheritedObjectType>
+				 </DelegatedRight>
+			</DelegatedRights>
+		</OU>
 		<OU Name="People">
+			<DelegatedRights>
+				<DelegatedRight>
+				 	<Identity>PERM-LIVE-People_Management-FCUO</Identity>
+					<ADRights>GenericAll</ADRights>
+					<Type>Allow</Type>
+					<ObjectType></ObjectType>
+					<InheritanceType>Descendents</InheritanceType>
+					<InheritedObjectType>user</InheritedObjectType>
+				 </DelegatedRight>
+				<DelegatedRight>
+				 	<Identity>PERM-LIVE-People_Management-FCUO</Identity>
+					<ADRights>CreateChild,DeleteChild</ADRights>
+					<Type>Allow</Type>
+					<ObjectType>user</ObjectType>
+					<InheritanceType>All</InheritanceType>
+					<InheritedObjectType></InheritedObjectType>
+				 </DelegatedRight>
+			</DelegatedRights>
 			<OU Name="Deactivated" />
 		</OU>
 	</OU>
 	<OU Name="Test">
 		<OU Name="Servers">
+			<DelegatedRights>
+				<DelegatedRight>
+					<Identity>PERM-TEST-Server_Management-FCCO</Identity>
+					<ADRights>GenericAll</ADRights>
+					<Type>Allow</Type>
+					<ObjectType></ObjectType>
+					<InheritanceType>Descendents</InheritanceType>
+					<InheritedObjectType>computer</InheritedObjectType>
+				</DelegatedRight>
+				<DelegatedRight>
+					<Identity>PERM-TEST-Server_Management-FCCO</Identity>
+					<ADRights>CreateChild,DeleteChild</ADRights>
+					<Type>Allow</Type>
+					<ObjectType>computer</ObjectType>
+					<InheritanceType>Descendents</InheritanceType>
+					<InheritedObjectType>organizationalunit</InheritedObjectType>
+				</DelegatedRight>
+				<DelegatedRight>
+				 	<Identity>PERM-TEST-OU_Management-OUFC</Identity>
+					<ADRights>GenericAll</ADRights>
+					<Type>Allow</Type>
+					<ObjectType></ObjectType>
+					<InheritanceType>Descendents</InheritanceType>
+					<InheritedObjectType>organizationalunit</InheritedObjectType>
+				 </DelegatedRight>
+				<DelegatedRight>
+				 	<Identity>PERM-TEST-OU_Management-OUFC</Identity>
+					<ADRights>CreateChild,DeleteChild</ADRights>
+					<Type>Allow</Type>
+					<ObjectType>organizationalunit</ObjectType>
+					<InheritanceType>All</InheritanceType>
+					<InheritedObjectType></InheritedObjectType>
+				 </DelegatedRight>
+				<DelegatedRight>
+				 	<Identity>PERM-TEST-GPO_Management-GPOM</Identity>
+					<ADRights>WriteProperty</ADRights>
+					<Type>Allow</Type>
+					<ObjectType>gplink</ObjectType>
+					<InheritanceType>All</InheritanceType>
+					<InheritedObjectType></InheritedObjectType>
+				 </DelegatedRight>
+				<DelegatedRight>
+				 	<Identity>PERM-TEST-GPO_Management-GPOM</Identity>
+					<ADRights>WriteProperty</ADRights>
+					<Type>Allow</Type>
+					<ObjectType>gpoptions</ObjectType>
+					<InheritanceType>All</InheritanceType>
+					<InheritedObjectType></InheritedObjectType>
+				 </DelegatedRight>
+			</DelegatedRights>
 			<OU Name="Management" />
 		</OU>
 		<OU Name="Client Devices">
+			<DelegatedRights>
+				<DelegatedRight>
+					<Identity>PERM-TEST-Client_Device_Management-FCCO</Identity>
+					<ADRights>GenericAll</ADRights>
+					<Type>Allow</Type>
+					<ObjectType></ObjectType>
+					<InheritanceType>Descendents</InheritanceType>
+					<InheritedObjectType>computer</InheritedObjectType>
+				</DelegatedRight>
+				<DelegatedRight>
+					<Identity>PERM-TEST-Client_Device_Management-FCCO</Identity>
+					<ADRights>CreateChild,DeleteChild</ADRights>
+					<Type>Allow</Type>
+					<ObjectType>computer</ObjectType>
+					<InheritanceType>Descendents</InheritanceType>
+					<InheritedObjectType>organizationalunit</InheritedObjectType>
+				</DelegatedRight>
+				<DelegatedRight>
+				 	<Identity>PERM-TEST-GPO_Management-GPOM</Identity>
+					<ADRights>WriteProperty</ADRights>
+					<Type>Allow</Type>
+					<ObjectType>gplink</ObjectType>
+					<InheritanceType>All</InheritanceType>
+					<InheritedObjectType></InheritedObjectType>
+				 </DelegatedRight>
+				<DelegatedRight>
+				 	<Identity>PERM-TEST-GPO_Management-GPOM</Identity>
+					<ADRights>WriteProperty</ADRights>
+					<Type>Allow</Type>
+					<ObjectType>gpoptions</ObjectType>
+					<InheritanceType>All</InheritanceType>
+					<InheritedObjectType></InheritedObjectType>
+				 </DelegatedRight>
+			</DelegatedRights>
 			<OU Name="Desktops" />
 			<OU Name="Laptops" />
 			<OU Name="Mobile Devices" />
@@ -51,8 +262,61 @@
 			<OU Name="Virtual Desktops" />
 			<OU Name="Deactivated"/>
 		</OU>
-		<OU Name="Groups" />
+		<OU Name="Groups">
+			<DelegatedRights>
+				<DelegatedRight>
+				 	<Identity>PERM-TEST-Group_Management-FCGO</Identity>
+					<ADRights>GenericAll</ADRights>
+					<Type>Allow</Type>
+					<ObjectType></ObjectType>
+					<InheritanceType>Descendents</InheritanceType>
+					<InheritedObjectType>user</InheritedObjectType>
+				 </DelegatedRight>
+				<DelegatedRight>
+				 	<Identity>PERM-TEST-Group_Management-FCGO</Identity>
+					<ADRights>CreateChild,DeleteChild</ADRights>
+					<Type>Allow</Type>
+					<ObjectType>user</ObjectType>
+					<InheritanceType>All</InheritanceType>
+					<InheritedObjectType></InheritedObjectType>
+				 </DelegatedRight>
+			</DelegatedRights>
+		</OU>
 		<OU Name="People">
+			<DelegatedRights>
+				<DelegatedRight>
+				 	<Identity>PERM-TEST-People_Management-FCUO</Identity>
+					<ADRights>GenericAll</ADRights>
+					<Type>Allow</Type>
+					<ObjectType></ObjectType>
+					<InheritanceType>Descendents</InheritanceType>
+					<InheritedObjectType>user</InheritedObjectType>
+				 </DelegatedRight>
+				<DelegatedRight>
+				 	<Identity>PERM-TEST-People_Management-FCUO</Identity>
+					<ADRights>CreateChild,DeleteChild</ADRights>
+					<Type>Allow</Type>
+					<ObjectType>user</ObjectType>
+					<InheritanceType>All</InheritanceType>
+					<InheritedObjectType></InheritedObjectType>
+				 </DelegatedRight>
+				<DelegatedRight>
+				 	<Identity>PERM-TEST-GPO_Management-GPOM</Identity>
+					<ADRights>WriteProperty</ADRights>
+					<Type>Allow</Type>
+					<ObjectType>gplink</ObjectType>
+					<InheritanceType>All</InheritanceType>
+					<InheritedObjectType></InheritedObjectType>
+				 </DelegatedRight>
+				<DelegatedRight>
+				 	<Identity>PERM-TEST-GPO_Management-GPOM</Identity>
+					<ADRights>WriteProperty</ADRights>
+					<Type>Allow</Type>
+					<ObjectType>gpoptions</ObjectType>
+					<InheritanceType>All</InheritanceType>
+					<InheritedObjectType></InheritedObjectType>
+				 </DelegatedRight>
+			</DelegatedRights>
 			<OU Name="Deactivated" />
 		</OU>
 	</OU>

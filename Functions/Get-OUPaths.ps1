@@ -4,12 +4,13 @@ param($ParentDN,[System.Xml.XmlElement]$OUStructure,[int]$OUDepth=1)
     
     $OUStructure.OU | Foreach{
 
-        $Out             = '' | Select-Object Name, Description, ParentDN, DN, OUDepth
-        $Out.Name        = $_.Name
-		$Out.Description = $_.Description
-        $Out.ParentDN    = $ParentDN
-        $Out.DN          = "OU=$($_.Name)",$ParentDN -join ','
-        $Out.OUDepth     = $OUDepth
+        $Out                 = '' | Select-Object Name, Description, ParentDN, DN, OUDepth, DelegatedRights
+        $Out.Name            = $_.Name
+		$Out.Description     = $_.Description
+        $Out.ParentDN        = $ParentDN
+        $Out.DN              = "OU=$($_.Name)",$ParentDN -join ','
+        $Out.OUDepth         = $OUDepth
+        $Out.DelegatedRights = $_.DelegatedRights.DelegatedRight
         $Out
 
         if($_.OU){

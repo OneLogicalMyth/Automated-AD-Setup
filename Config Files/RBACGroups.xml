@@ -1,24 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <RBACGroups>
-	<Roles>
-		<Role>
-			<Name>ROLE-System_Administrator</Name>
-			<Description></Description>
-			<Location></Location>
-		</Role>
-		<Role>
-			<Name>ROLE-Desktop_Administrator</Name>
-			<Description></Description>
-			<Location></Location>
-		</Role>
-		<Role>
-			<Name>ROLE-Service_Desk</Name>
-			<Description></Description>
-			<Location></Location>
-		</Role>
-	</Roles>
-	<Permissions>
-	</Permissions>
-	<Managers>
-	</Managers>
+   <Roles>
+      <Group>
+         <Name>ROLE-System_Administrator</Name>
+         <Description>Full access for administration of the windows domain.</Description>
+         <Location>OU=Roles,OU=RBAC,OU=Administrative</Location>
+		 <MemberOf>
+		 	<Group>Domain Admins</Group>
+		 </MemberOf>
+      </Group>
+      <Group>
+         <Name>ROLE-Desktop_Administrator</Name>
+         <Description>Full control over client devices, groups and people in live and test.</Description>
+         <Location>OU=Roles,OU=RBAC,OU=Administrative</Location>
+		 <MemberOf>
+		 	<Group>PERM-New_Computers_OU-FCCO</Group>
+		 	<Group>PERM-LIVE-Group_Management-FCGO</Group>
+			<Group>PERM-LIVE-People_Management-FCUO</Group>
+			<Group>PERM-LIVE-Client_Device_Management-FCCO</Group>
+		 	<Group>PERM-TEST-Group_Management-FCGO</Group>
+			<Group>PERM-TEST-People_Management-FCUO</Group>
+			<Group>PERM-TEST-Client_Device_Management-FCCO</Group>
+      </Group>
+      <Group>
+         <Name>ROLE-Service_Desk</Name>
+         <Description>Full control over groups and people in live and test.</Description>
+         <Location>OU=Roles,OU=RBAC,OU=Administrative</Location>
+		 <MemberOf>
+		 	<Group>PERM-LIVE-Group_Management-FCGO</Group>
+			<Group>PERM-LIVE-People_Management-FCUO</Group>
+		 </MemberOf>
+      </Group>
+      <Group>
+         <Name>ROLE-System_Developer</Name>
+         <Description>Full control over test only for users, client devices, servers and groups.</Description>
+         <Location>OU=Roles,OU=RBAC,OU=Administrative</Location>
+		 <MemberOf>
+		 	<Group>PERM-TEST-Group_Management-FCGO</Group>
+			<Group>PERM-TEST-People_Management-FCUO</Group>
+			<Group>PERM-TEST-Server_Management-FCCO</Group>
+			<Group>PERM-TEST-Client_Device_Management-FCCO</Group>
+		 </MemberOf>
+      </Group>
+   </Roles>
+   <Permissions>
+      <Group>
+         <Name>PERM-Administration_OU-FC</Name>
+         <Description>Full Control over Administration OU on all descendant objects</Description>
+         <Location>OU=Delegated Rights,OU=Permissions,OU=RBAC,OU=Administrative</Location>
+      </Group>
+      <Group>
+         <Name>PERM-New_Computers_OU-FCCO</Name>
+         <Description>Full Control over Computer Objects in the New Computers OU on all descendant objects</Description>
+         <Location>OU=Delegated Rights,OU=Permissions,OU=RBAC,OU=Administrative</Location>
+      </Group>
+      <Group>
+         <Name>PERM-Admin_Account_Management-FCUO</Name>
+         <Description>Grants account management for admins, excludes control over domain admins and administrators group members on all descendant objects</Description>
+         <Location>OU=Delegated Rights,OU=Permissions,OU=RBAC,OU=Administrative</Location>
+      </Group>
+      <Group>
+         <Name>PERM-TEST-Group_Management-FCGO</Name>
+         <Description>Full control over the Test groups on all descendant objects</Description>
+         <Location>OU=Delegated Rights,OU=Permissions,OU=RBAC,OU=Administrative</Location>
+      </Group>
+      <Group>
+         <Name>PERM-TEST-People_Management-FCUO</Name>
+         <Description>Full control over the Test people on all descendant objects</Description>
+         <Location>OU=Delegated Rights,OU=Permissions,OU=RBAC,OU=Administrative</Location>
+      </Group>
+      <Group>
+         <Name>PERM-TEST-Server_Management-FCCO</Name>
+         <Description>Full control over the Test servers on all descendant objects</Description>
+         <Location>OU=Delegated Rights,OU=Permissions,OU=RBAC,OU=Administrative</Location>
+      </Group>
+      <Group>
+         <Name>PERM-TEST-Client_Device_Management-FCCO</Name>
+         <Description>Full control over the Test client devices on all descendant objects</Description>
+         <Location>OU=Delegated Rights,OU=Permissions,OU=RBAC,OU=Administrative</Location>
+      </Group>
+      <Group>
+         <Name>PERM-TEST-OU_Management-OUFC</Name>
+         <Description>Full control over the Test sub OUs on all descendant objects</Description>
+         <Location>OU=Delegated Rights,OU=Permissions,OU=RBAC,OU=Administrative</Location>
+      </Group>
+      <Group>
+         <Name>PERM-TEST-GPO_Management-GPOM</Name>
+         <Description>Full control over the Test group policy objects on all descendant objects</Description>
+         <Location>OU=Delegated Rights,OU=Permissions,OU=RBAC,OU=Administrative</Location>
+      </Group>
+      <Group>
+         <Name>PERM-LIVE-Group_Management-FCGO</Name>
+         <Description>Full control over the Live groups on all descendant objects</Description>
+         <Location>OU=Delegated Rights,OU=Permissions,OU=RBAC,OU=Administrative</Location>
+      </Group>
+      <Group>
+         <Name>PERM-LIVE-People_Management-FCUO</Name>
+         <Description>Full control over the Live people on all descendant objects</Description>
+         <Location>OU=Delegated Rights,OU=Permissions,OU=RBAC,OU=Administrative</Location>
+      </Group>
+      <Group>
+         <Name>PERM-LIVE-Server_Management-FCCO</Name>
+         <Description>Full control over the Live servers on all descendant objects</Description>
+         <Location>OU=Delegated Rights,OU=Permissions,OU=RBAC,OU=Administrative</Location>
+      </Group>
+      <Group>
+         <Name>PERM-LIVE-Client_Device_Management-FCCO</Name>
+         <Description>Full control over the Live workstations on all descendant objects</Description>
+         <Location>OU=Delegated Rights,OU=Permissions,OU=RBAC,OU=Administrative</Location>
+      </Group>
+      <Group>
+         <Name>PERM-LA-SVR-Live-ALL</Name>
+         <Description>Local administrative privilages on all Live servers</Description>
+         <Location>OU=Local Rights,OU=Permissions,OU=RBAC,OU=Administrative</Location>
+      </Group>
+      <Group>
+         <Name>PERM-ELR-SVR-Live-ALL</Name>
+         <Description>Event log reading privilages on all Live servers</Description>
+         <Location>OU=Local Rights,OU=Permissions,OU=RBAC,OU=Administrative</Location>
+      </Group>
+      <Group>
+         <Name>PERM-PLU-SVR-Live-ALL</Name>
+         <Description>Performance log users privilages on all Live servers</Description>
+         <Location>OU=Local Rights,OU=Permissions,OU=RBAC,OU=Administrative</Location>
+      </Group>
+      <Group>
+         <Name>PERM-LA-SVR-Test-ALL</Name>
+         <Description>Local administrative privilages on all Test servers</Description>
+         <Location>OU=Local Rights,OU=Permissions,OU=RBAC,OU=Administrative</Location>
+      </Group>
+      <Group>
+         <Name>PERM-ELR-SVR-Test-ALL</Name>
+         <Description>Event log reading privilages on all Test servers</Description>
+         <Location>OU=Local Rights,OU=Permissions,OU=RBAC,OU=Administrative</Location>
+      </Group>
+      <Group>
+         <Name>PERM-PLU-SVR-Test-ALL</Name>
+         <Description>Performance log users privilages on all Test servers</Description>
+         <Location>OU=Local Rights,OU=Permissions,OU=RBAC,OU=Administrative</Location>
+      </Group>
+      <Group>
+         <Name>PERM-RDP-SVR-Live-ALL</Name>
+         <Description>Local remote desktop privilages to all Live servers</Description>
+         <Location>OU=Local Rights,OU=Permissions,OU=RBAC,OU=Administrative</Location>
+      </Group>
+      <Group>
+         <Name>PERM-RDP-SVR-Test-ALL</Name>
+         <Description>Local remote desktop privilages to all Test servers</Description>
+         <Location>OU=Local Rights,OU=Permissions,OU=RBAC,OU=Administrative</Location>
+      </Group>
+      <Group>
+         <Name>PERM-LA-CLIENT-Live-ALL</Name>
+         <Description>Local administrative privilages on all Live Client Devices</Description>
+         <Location>OU=Local Rights,OU=Permissions,OU=RBAC,OU=Administrative</Location>
+      </Group>
+      <Group>
+         <Name>PERM-LA-CLIENT-Test-ALL</Name>
+         <Description>Local administrative privilages on all Test Client Devices</Description>
+         <Location>OU=Local Rights,OU=Permissions,OU=RBAC,OU=Administrative</Location>
+      </Group>
+   </Permissions>
+   <Managers>
+      <Group>
+         <Name>ROLE-MAN-Desktop_Administrator</Name>
+         <Description>Able to perform password reset of all desktop administrator members. Can also create and delete members.</Description>
+         <Location>OU=Roles,OU=RBAC,OU=Administrative</Location>
+      </Group>
+      <Group>
+         <Name>ROLE-MAN-Service_Desk</Name>
+         <Description>Able to perform password reset of all service desk members. Can also create and delete members.</Description>
+         <Location>OU=Roles,OU=RBAC,OU=Administrative</Location>
+      </Group>
+      <Group>
+         <Name>ROLE-MAN-System_Developer</Name>
+         <Description>Able to perform password reset of all developer members. Can also create and delete members.</Description>
+         <Location>OU=Roles,OU=RBAC,OU=Administrative</Location>
+      </Group>
+   </Managers>
 </RBACGroups>
-
