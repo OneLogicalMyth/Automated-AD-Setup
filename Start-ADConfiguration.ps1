@@ -6,14 +6,10 @@ if(-not (Test-Path C:\ADConfiguration\Start-ADConfiguration.ps1)){
     Write-Host 'Copying script files to C:\ADConfiguration, please wait'
     $null = robocopy $PSScriptRoot "${ENV:SystemDrive}\ADConfiguration" /E
     if($LASTEXITCODE -eq 1){
-
+        #In my demo video I show you to extract to my documents which copies the desktop.ini file across
+        Remove-Item C:\ADConfiguration\desktop.ini -Force -ErrorAction SilentlyContinue
     }
 }
-
-
-
-$null = robocopy $PSScriptRoot "${ENV:SystemDrive}\ADConfiguration" /E
-
 
 switch ($Step)
 {
