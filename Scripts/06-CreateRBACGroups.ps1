@@ -6,6 +6,7 @@ $RBACGroups = ([xml](Get-Content (Join-Path $PSScriptRoot '..\Config Files\RBACG
 
 #Import logging function and ou path function
 . (Join-Path $PSScriptRoot '..\Functions\Write-LogEntry.ps1')
+. (Join-Path $PSScriptRoot '..\Functions\Add-DelegatedRight.ps1')
 
 #Grab domain DN
 $DomainDN = $(Get-ADDomain).DistinguishedName

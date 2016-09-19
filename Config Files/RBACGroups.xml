@@ -5,6 +5,7 @@
          <Name>ROLE-System_Administrator</Name>
          <Description>Full access for administration of the windows domain.</Description>
          <Location>OU=Roles,OU=RBAC,OU=Administrative</Location>
+         <ManagedBy />
 		 <MemberOf>
 		 	<Group>Domain Admins</Group>
 		 </MemberOf>
@@ -13,6 +14,7 @@
          <Name>ROLE-Desktop_Administrator</Name>
          <Description>Full control over client devices, groups and people in live and test.</Description>
          <Location>OU=Roles,OU=RBAC,OU=Administrative</Location>
+         <ManagedBy>ROLE-MAN-Desktop_Administrator</ManagedBy>
 		 <MemberOf>
 		 	<Group>PERM-New_Computers_OU-FCCO</Group>
 		 	<Group>PERM-LIVE-Group_Management-FCGO</Group>
@@ -27,6 +29,7 @@
          <Name>ROLE-Service_Desk</Name>
          <Description>Full control over groups and people in live and test.</Description>
          <Location>OU=Roles,OU=RBAC,OU=Administrative</Location>
+         <ManagedBy>ROLE-MAN-Service_Desk</ManagedBy>
 		 <MemberOf>
 		 	<Group>PERM-LIVE-Group_Management-FCGO</Group>
 			<Group>PERM-LIVE-People_Management-FCUO</Group>
