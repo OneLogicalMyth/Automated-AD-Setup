@@ -62,6 +62,8 @@ switch ($Step)
         &(Join-Path $PSScriptRoot 'Scripts\06-CreateRBACGroups.ps1')
         &(Join-Path $PSScriptRoot 'Scripts\07-ConfigureDomain.ps1')
         &(Join-Path $PSScriptRoot 'Scripts\08-DelegatedRights.ps1')
+        &(Join-Path $PSScriptRoot 'Scripts\09-CreatePSO.ps1')
+        &(Join-Path $PSScriptRoot 'Scripts\10-CreateGroupPolicy')
 
         # All completed
         $Domain       = Get-ADDomain

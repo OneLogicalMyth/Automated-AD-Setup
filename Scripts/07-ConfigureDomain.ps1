@@ -32,8 +32,7 @@ redirusr $DefaultUserOU
 
 
 #rename master admin account
-$AdminName     = Import-Csv (Join-Path $PSScriptRoot '..\Config Files\NewAdminNames.csv') | Get-Random
-$AdminUsername =  "A-$($AdminName.Surname)$($AdminName.GivenName.Substring(0,1))"
+$AdminUsername =  "A-$($AdminDetails.FirstName)$($AdminDetails.LastName.Substring(0,1))"
 
 $NewAdminDetails = @{
 	Office        = $AdminDetails.Office
@@ -46,9 +45,10 @@ $NewAdminDetails = @{
 	Title         = $AdminDetails.Title
 	Company       = $AdminDetails.Company
 	Description   = $AdminDetails.Description
-	HomePage      = $AdminDetails.HomePage
-	GivenName     = $AdminName.GivenName
-	Surname       = $AdminName.Surname
+	GivenName     = $AdminDetails.FirstName
+	Surname       = $AdminDetails.LastName
+	Department    = $AdminDetails.Department
+	DisplayName   = "$($AdminDetails.LastName), $($AdminDetails.FirstName)"
     
     UserPrincipalName = "$AdminUsername@$DomainFQDN"
     SamAccountName    = $AdminUsername
@@ -59,7 +59,14 @@ $Empties = $NewAdminDetails.Keys | Where-Object { [string]::IsNullOrEmpty($NewAd
 $Empties | foreach{ $NewAdminDetails.$_ = $null }
 
 #Rename the administartor account and move it to the desired location
-Get-ADUser $AdminAccount | Set-ADUser @NewAdminDetails | Move-ADObject -TargetPath "$($AdminDetails.Location),$DomainDN"
+$AdminObj = Get-ADUser $AdminAccount
+$AdminObj | Set-ADUser @NewAdminDetails
+Rename-ADObject -Identity $AdminObj.DistinguishedName -NewName "$($AdminDetails.LastName), $($AdminDetails.FirstName)"
+$AdminObj = Get-ADUser $AdminAccount
+$AdminObj | Set-ADObject -ProtectedFromAccidentalDeletion $false
+$AdminObj | Move-ADObject -TargetPath "$($AdminDetails.Location),$DomainDN"
+$AdminObj = Get-ADUser $AdminAccount
+$AdminObj | Set-ADObject -ProtectedFromAccidentalDeletion $true
 
 #Enable the Recycle Bin
 Enable-ADOptionalFeature "Recycle Bin Feature" -Scope ForestOrConfigurationSet -Target (Get-ADDomain).DnsRoot.ToString() -Confirm:$false

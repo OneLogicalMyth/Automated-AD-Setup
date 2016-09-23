@@ -68,15 +68,20 @@ Set-DnsClientServerAddress -InterfaceIndex $Adapter_Index -ServerAddresses $Serv
 Write-LogEntry -LogFile $LogFile -Message "Renaming computer to $($ServerConfig.ComputerName)"
 Rename-Computer -NewName $ServerConfig.ComputerName -force 
 
-#Remove GUI and add AD-Domain-Services
-Write-LogEntry -LogFile $LogFile -Message 'Removing windows features Desktop-Experience and Server-Gui-Shell'
-$null = Uninstall-WindowsFeature -Name Desktop-Experience,Server-Gui-Shell -Remove
+#Remove GUI
+if([bool]([int]$ServerConfig.RemoveGUI))
+{
+    Write-LogEntry -LogFile $LogFile -Message 'Removing windows features Desktop-Experience and Server-Gui-Shell'
+    $null = Uninstall-WindowsFeature -Name Desktop-Experience,Server-Gui-Shell -Remove
+
+    #Set PowerShell as default
+    Write-LogEntry -LogFile $LogFile -Message 'Changing shell to PowerShell instead of cmd prompt, also setting sconfig to launch at logon'
+    Set-ItemProperty -Path 'HKLM:SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon' -Name Shell -Value 'powershell.exe -noexit -Command "Set-Location ${Env:USERPROFILE};start sconfig"'
+}
+
+#Install AD-Domain-Services
 Write-LogEntry -LogFile $LogFile -Message 'Installing AD domain services role'
 $null = Install-WindowsFeature -Name AD-Domain-Services
-
-#Set PowerShell as default
-Write-LogEntry -LogFile $LogFile -Message 'Changing shell to PowerShell instead of cmd prompt, also setting sconfig to launch at logon'
-Set-ItemProperty -Path 'HKLM:SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon' -Name Shell -Value 'powershell.exe -noexit -Command "Set-Location ${Env:USERPROFILE};start sconfig"'
 
 #Setting scheduled task
 Write-LogEntry -LogFile $LogFile -Message 'Setting up scheduled task so setup can continue after reboot'

@@ -1,0 +1,27 @@
+<PSO>
+    <PSO>
+        <Name>AdministrativePolicy</Name>
+        <AppliesTo>
+            <Group>Domain Admins</Group>
+            <Group>Enterprise Admins</Group>
+            <Group>Administrators</Group>
+            <Group>ROLE-System_Administrator</Group>
+            <Group>ROLE-Desktop_Administrator</Group>
+            <Group>ROLE-Service_Desk</Group>
+            <Group>ROLE-System_Developer</Group>
+            <Group>SHAD-Service_Accounts</Group>
+        </AppliesTo>
+        <Precedence>1</Precedence>
+        <ComplexityEnabled>1</ComplexityEnabled>
+        <Description>The password policy for administrative accounts</Description>
+        <DisplayName>Administrative Password Policy</DisplayName>
+        <LockoutDuration>0.00:15:00</LockoutDuration>
+        <LockoutObservationWindow>0.00:15:00</LockoutObservationWindow>
+        <LockoutThreshold>5</LockoutThreshold>
+        <MaxPasswordAge>60.00:00:00</MaxPasswordAge>
+        <MinPasswordAge>1.00:00:00</MinPasswordAge>
+        <MinPasswordLength>15</MinPasswordLength>
+        <PasswordHistoryCount>24</PasswordHistoryCount>
+        <ReversibleEncryptionEnabled>0</ReversibleEncryptionEnabled>
+    </PSO>
+</PSO>

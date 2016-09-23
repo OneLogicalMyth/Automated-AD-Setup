@@ -14,9 +14,14 @@ $PDC          = $Domain.PDCEmulator.ToString()
 $ADZone       = $Domain.DNSRoot
 $WriteableDCs = $Domain.ReplicaDirectoryServers
 
+#Get configuration
+Write-LogEntry -LogFile $LogFile -Message "Reading configuration file for DNS"
+[xml]$Config = Get-Content (Join-Path $PSScriptRoot '..\Config Files\DNS.xml') -ErrorAction Stop
+
 #Build timespan objects
-$7Days = New-TimeSpan -Days 7
-$4Days = New-TimeSpan -Days 4
+$NoRefreshInterval  = New-TimeSpan -Days ([int]$Config.DNS.NoRefreshInterval)
+$RefreshInterval    = New-TimeSpan -Days ([int]$Config.DNS.RefreshInterval)
+$ScavengingInterval = New-TimeSpan -Days ([int]$Config.DNS.ScavengingInterval)
 
 #Set primary AD zone to secure only
 Write-LogEntry -LogFile $LogFile -Message "Switching dynamic updates for zone '$ADZone' to secure"
@@ -24,16 +29,14 @@ Set-DnsServerPrimaryZone -Name $ADZone -ComputerName $PDC -DynamicUpdate Secure
 
 #Set primary AD zone aging
 Write-LogEntry -LogFile $LogFile -Message "Enabling aging for '$ADZone', no refresh interval and refresh interval set to 7 days"
-Set-DnsServerZoneAging -Aging $true -Name $ADZone -ComputerName $PDC -NoRefreshInterval $7Days -RefreshInterval $7Days
+Set-DnsServerZoneAging -Aging $true -Name $ADZone -ComputerName $PDC -NoRefreshInterval $NoRefreshInterval -RefreshInterval $RefreshInterval
 
 #Enable scavinging only on the PDC
 Write-LogEntry -LogFile $LogFile -Message "Enabling scavenging on '$PDC' scavenging interval set to 4 days"
-Set-DnsServerScavenging -ComputerName $PDC -ScavengingInterval $4Days -ScavengingState $true
+Set-DnsServerScavenging -ComputerName $PDC -ScavengingInterval $ScavengingInterval -ScavengingState $true
 
-#Get configuration
-Write-LogEntry -LogFile $LogFile -Message "Reading configuration file for DNS forwarders"
-[xml]$Config = Get-Content (Join-Path $PSScriptRoot '..\Config Files\DNSForwarders.xml') -ErrorAction Stop
-$DNSForwardersRAW = $Config.DNSForwarders.IP
+# Grab DNS forwarders
+$DNSForwardersRAW = $Config.DNS.DNSForwarders.IP
 
 #check if forwarders are set
 if($DNSForwardersRAW){

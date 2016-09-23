@@ -1,4 +1,6 @@
 <NewAdminDetails>
+	<FirstName>Scott</FirstName>
+	<LastName>Jennings</LastName>
 	<Office>London Office</Office>
 	<StreetAddress>88 Guild Street</StreetAddress>
 	<City>London</City>
@@ -8,7 +10,7 @@
 	<OfficePhone>077 7611 0630</OfficePhone>
 	<Title>System Administrator</Title>
 	<Company>Example Inc.</Company>
+	<Department>IT Support</Department>
 	<Description></Description>
-	<HomePage></HomePage>
-	<Loction>OU=System Administrator,OU=Admins,OU=Administrative</Loction>
+	<Location>OU=System Administrator,OU=Admins,OU=Administrative</Location>
 </NewAdminDetails>

@@ -1,22 +1,22 @@
 #requires -version 4.0
 #requires -runasadministrator
 
-#Grab OU structure from config
+# Grab OU structure from config
 $RBACGroups = ([xml](Get-Content (Join-Path $PSScriptRoot '..\Config Files\RBACGroups.xml'))).RBACGroups 
 
-#Import logging function and ou path function
+# Import logging function and ou path function
 . (Join-Path $PSScriptRoot '..\Functions\Write-LogEntry.ps1')
 . (Join-Path $PSScriptRoot '..\Functions\Add-DelegatedRight.ps1')
 
-#Grab domain DN
+# Grab domain DN
 $DomainDN = $(Get-ADDomain).DistinguishedName
 
-#Create logs directory and file
+# Create logs directory and file
 $LogFile = (Join-Path $PSScriptRoot "..\Logs\$((Get-Item $PSCommandPath).BaseName)-$((Get-Date).ToString('ddMMyyyy')).log")
 New-Item -Path $LogFile -ItemType File -ErrorAction SilentlyContinue | Out-Null
 
-#Active directory module does not SilentlyContinue will still error regardless
-#Function to test if the group exists
+# Active directory module does not SilentlyContinue will still error regardless
+# Function to test if the group exists
 Function Test-ADGroup
 {
 param($GroupIdentity)
@@ -31,7 +31,7 @@ param($GroupIdentity)
 }
 
 
-#Function to create a group or move if existing and not in correct place
+# Function to create a group or move if existing and not in correct place
 Function Invoke-CreateADGroup
 {
 param($Name,$Description,$Location,$DomainDN,$LogFile)
@@ -61,14 +61,14 @@ param($Name,$Description,$Location,$DomainDN,$LogFile)
 
 }
 
-#Create all the required groups to work with
+# Create all the required groups to work with
 Foreach($Group IN ($RBACGroups.Roles.Group + $RBACGroups.Permissions.Group + $RBACGroups.Managers.Group))
 {
     Invoke-CreateADGroup -Name $Group.Name -Description $Group.Description -Location $Group.Location -DomainDN $DomainDN -LogFile $LogFile
     $Group = $null
 }
 
-#Loop through and add permissive groups to the roles
+# Loop through and add permissive groups to the roles
 ForEach ($Group in $RBACGroups.Roles.Group)
 {   try
     {
@@ -81,16 +81,17 @@ ForEach ($Group in $RBACGroups.Roles.Group)
     $Group = $null
 }
 
-#Now grant the manager groups management of the roles
+# Now grant the manager groups management of the roles
 Foreach ($Group IN $RBACGroups.Roles.Group)
 {
     if(-not [string]::IsNullOrEmpty($Group.ManagedBy))
     {
-        #Add the management group to the 'Managed By' tab
+        # Add the management group to the 'Managed By' tab
         $ADGroup = Get-ADGroup $Group.Name
         $ADGroup | Set-ADGroup -ManagedBy $Group.ManagedBy
 
-        #Grant the management group access to remove and add members
+        # Grant the management group access to remove and add members
+        # GUID represents the member attribute in AD
         $perm = @{
             DN              = $ADGroup.DistinguishedName
             Identity        = $Group.ManagedBy

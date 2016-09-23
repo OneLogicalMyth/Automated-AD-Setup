@@ -51,7 +51,5 @@ Temporary Items
 *.csv
 Config Files/GroupPolicy.xml
 Functions/New-RBACRole.ps1
-Scripts/09-ConfigureOUDelegatedRights.ps1
-Scripts/11-CreateGroupPolicy.ps1
 Scripts/99-PromoteOtherDCs.ps1
 Config Files/DefaultGroups.xml

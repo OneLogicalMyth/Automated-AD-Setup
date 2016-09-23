@@ -10,6 +10,7 @@
 			<IP>192.168.1.2</IP>
 			<IP>192.168.1.1</IP>
 		</DNSServers>
+		<RemoveGUI>0</RemoveGUI>
 	</DC>
 	<DC>
 		<ID>2</ID>
@@ -21,6 +22,7 @@
 			<IP>192.168.1.2</IP>
 			<IP>192.168.1.3</IP>
 		</DNSServers>
+		<RemoveGUI>1</RemoveGUI>
 	</DC>
 	<DC>
 		<ID>3</ID>
@@ -32,5 +34,6 @@
 			<IP>192.168.1.1</IP>
 			<IP>192.168.1.3</IP>
 		</DNSServers>
+		<RemoveGUI>1</RemoveGUI>
 	</DC>
 </DomainControllers>

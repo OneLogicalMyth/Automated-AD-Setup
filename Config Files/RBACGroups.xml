@@ -50,6 +50,11 @@
    </Roles>
    <Permissions>
       <Group>
+         <Name>SHAD-Service_Accounts</Name>
+         <Description>Service Accounts - shadow group used for applying policy</Description>
+         <Location>OU=Service Accounts,OU=Administrative</Location>
+      </Group>
+      <Group>
          <Name>PERM-Administration_OU-FC</Name>
          <Description>Full Control over Administration OU on all descendant objects</Description>
          <Location>OU=Delegated Rights,OU=Permissions,OU=RBAC,OU=Administrative</Location>
