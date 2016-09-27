@@ -60,7 +60,7 @@ $Empties | foreach{ $NewAdminDetails.$_ = $null }
 
 #Rename the administartor account and move it to the desired location
 $AdminObj = Get-ADUser $AdminAccount
-$AdminObj | Set-ADUser @NewAdminDetails
+$AdminObj | Set-ADUser @NewAdminDetails -ChangePasswordAtLogon $true
 Rename-ADObject -Identity $AdminObj.DistinguishedName -NewName "$($AdminDetails.LastName), $($AdminDetails.FirstName)"
 $AdminObj = Get-ADUser $AdminAccount
 $AdminObj | Set-ADObject -ProtectedFromAccidentalDeletion $false
