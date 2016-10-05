@@ -47,7 +47,6 @@ Governance Scripts/
 Network Trash Folder
 Temporary Items
 .apdisk
-*.csv
 Functions/New-RBACRole.ps1
 Scripts/99-PromoteOtherDCs.ps1
 Config Files/DefaultGroups.xml
