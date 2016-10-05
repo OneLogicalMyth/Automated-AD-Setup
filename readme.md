@@ -1,6 +1,23 @@
-## Setup
-Simply download and extract the contents to a directory.
+[![GitHub release](https://img.shields.io/github/release/qubyte/rubidium.svg?maxAge=2592000)]()
 
-A full video on setup will be released once I am happy the script is stable.
+# Introduction
 
-Currently just using the repo to store my progress while I test and configure the scripts.
+A fully automated AD build script that will configure a domain fully for you.
+
+You just need to adjust the XML files located in the config directory to taste.
+
+
+# License
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see http://www.gnu.org/licenses/.
