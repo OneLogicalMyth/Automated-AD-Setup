@@ -1,0 +1,269 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<policyComments xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/CommentDefinitions">
+  <policyNamespaces>
+    <using prefix="ns0" namespace="FullArmor.Policies.0EF0F32B_7305_4FC7_BBEB_D43DCC622C81"></using>
+    <using prefix="ns1" namespace="FullArmor.Policies.3B9EA2B5_A1D1_4CD5_9EDE_75B22990BC21"></using>
+    <using prefix="ns2" namespace="FullArmor.Policies.C9E1D975_EA58_48C3_958E_3BC214D89A2E"></using>
+    <using prefix="ns3" namespace="Microsoft.Policies.AllowBuildPreview"></using>
+    <using prefix="ns4" namespace="Microsoft.Policies.AppxRuntime"></using>
+    <using prefix="ns5" namespace="Microsoft.Policies.Auditing"></using>
+    <using prefix="ns6" namespace="Microsoft.Policies.AutoPlay"></using>
+    <using prefix="ns7" namespace="Microsoft.Policies.Biometrics"></using>
+    <using prefix="ns8" namespace="Microsoft.Policies.CloudContent"></using>
+    <using prefix="ns9" namespace="Microsoft.Policies.ControlPanelDisplay"></using>
+    <using prefix="ns10" namespace="Microsoft.Policies.CredentialProviders"></using>
+    <using prefix="ns11" namespace="Microsoft.Policies.CredentialsUI"></using>
+    <using prefix="ns12" namespace="Microsoft.Policies.DataCollection"></using>
+    <using prefix="ns13" namespace="Microsoft.Policies.DeliveryOptimization"></using>
+    <using prefix="ns14" namespace="Microsoft.Policies.EventLogs"></using>
+    <using prefix="ns15" namespace="Microsoft.Policies.FeedbackNotifications"></using>
+    <using prefix="ns16" namespace="Microsoft.Policies.Globalization"></using>
+    <using prefix="ns17" namespace="Microsoft.Policies.GroupPolicy"></using>
+    <using prefix="ns18" namespace="Microsoft.Policies.InternetCommunicationManagement"></using>
+    <using prefix="ns19" namespace="Microsoft.Policies.InternetExplorer"></using>
+    <using prefix="ns20" namespace="Microsoft.Policies.LanmanWorkstation"></using>
+    <using prefix="ns21" namespace="Microsoft.Policies.MSI"></using>
+    <using prefix="ns22" namespace="Microsoft.Policies.MicrosoftEdge"></using>
+    <using prefix="ns23" namespace="Microsoft.Policies.NetworkConnections"></using>
+    <using prefix="ns24" namespace="Microsoft.Policies.NetworkProvider"></using>
+    <using prefix="ns25" namespace="Microsoft.Policies.NetworkSharing"></using>
+    <using prefix="ns26" namespace="Microsoft.Policies.OneDrive"></using>
+    <using prefix="ns27" namespace="Microsoft.Policies.PowerManagement"></using>
+    <using prefix="ns28" namespace="Microsoft.Policies.PowerShell"></using>
+    <using prefix="ns29" namespace="Microsoft.Policies.PtH"></using>
+    <using prefix="ns30" namespace="Microsoft.Policies.RemoteAssistance"></using>
+    <using prefix="ns31" namespace="Microsoft.Policies.RemoteProcedureCalls"></using>
+    <using prefix="ns32" namespace="Microsoft.Policies.TerminalServer"></using>
+    <using prefix="ns33" namespace="Microsoft.Policies.WindowsConnectionManager"></using>
+    <using prefix="ns34" namespace="Microsoft.Policies.WindowsDefender"></using>
+    <using prefix="ns35" namespace="Microsoft.Policies.WindowsExplorer"></using>
+    <using prefix="ns36" namespace="Microsoft.Policies.WindowsExplorer2"></using>
+    <using prefix="ns37" namespace="Microsoft.Policies.WindowsLogon"></using>
+    <using prefix="ns38" namespace="Microsoft.Policies.WindowsLogon2"></using>
+    <using prefix="ns39" namespace="Microsoft.Policies.WindowsRemoteManagement"></using>
+    <using prefix="ns40" namespace="Microsoft.Policies.WindowsStore"></using>
+    <using prefix="ns41" namespace="Microsoft.Policies.WindowsUpdate"></using>
+    <using prefix="ns42" namespace="Microsoft.Policies.WlanSvc"></using>
+  </policyNamespaces>
+  <comments>
+    <admTemplate>
+      <comment policyRef="ns0:POL_DriverLoadPolicy_Name" commentText="$(resource.ns0_POL_DriverLoadPolicy_Name)"></comment>
+      <comment policyRef="ns1:AllowCortana" commentText="$(resource.ns1_AllowCortana)"></comment>
+      <comment policyRef="ns1:AllowIndexingEncryptedStoresOrItems" commentText="$(resource.ns1_AllowIndexingEncryptedStoresOrItems)"></comment>
+      <comment policyRef="ns1:AllowSearchToUseLocation" commentText="$(resource.ns1_AllowSearchToUseLocation)"></comment>
+      <comment policyRef="ns2:POL_AdmPwd" commentText="$(resource.ns2_POL_AdmPwd)"></comment>
+      <comment policyRef="ns2:POL_AdmPwd_AdminName" commentText="$(resource.ns2_POL_AdmPwd_AdminName)"></comment>
+      <comment policyRef="ns2:POL_AdmPwd_DontAllowPwdExpirationBehindPolicy" commentText="$(resource.ns2_POL_AdmPwd_DontAllowPwdExpirationBehindPolicy)"></comment>
+      <comment policyRef="ns2:POL_AdmPwd_Enabled" commentText="$(resource.ns2_POL_AdmPwd_Enabled)"></comment>
+      <comment policyRef="ns3:AllowBuildPreview" commentText="$(resource.ns3_AllowBuildPreview)"></comment>
+      <comment policyRef="ns4:AppxRuntimeMicrosoftAccountsOptional" commentText="$(resource.ns4_AppxRuntimeMicrosoftAccountsOptional)"></comment>
+      <comment policyRef="ns5:IncludeCmdLine" commentText="$(resource.ns5_IncludeCmdLine)"></comment>
+      <comment policyRef="ns6:Autorun" commentText="$(resource.ns6_Autorun)"></comment>
+      <comment policyRef="ns6:NoAutoplayfornonVolume" commentText="$(resource.ns6_NoAutoplayfornonVolume)"></comment>
+      <comment policyRef="ns6:NoAutorun" commentText="$(resource.ns6_NoAutorun)"></comment>
+      <comment policyRef="ns7:Face_EnhancedAntiSpoofing" commentText="$(resource.ns7_Face_EnhancedAntiSpoofing)"></comment>
+      <comment policyRef="ns8:DisableWindowsConsumerFeatures" commentText="$(resource.ns8_DisableWindowsConsumerFeatures)"></comment>
+      <comment policyRef="ns9:CPL_Personalization_NoLockScreenCamera" commentText="$(resource.ns9_CPL_Personalization_NoLockScreenCamera)"></comment>
+      <comment policyRef="ns9:CPL_Personalization_NoLockScreenSlideshow" commentText="$(resource.ns9_CPL_Personalization_NoLockScreenSlideshow)"></comment>
+      <comment policyRef="ns10:AllowDomainPINLogon" commentText="$(resource.ns10_AllowDomainPINLogon)"></comment>
+      <comment policyRef="ns11:DisablePasswordReveal" commentText="$(resource.ns11_DisablePasswordReveal)"></comment>
+      <comment policyRef="ns11:EnumerateAdministrators" commentText="$(resource.ns11_EnumerateAdministrators)"></comment>
+      <comment policyRef="ns12:AllowTelemetry" commentText="$(resource.ns12_AllowTelemetry)"></comment>
+      <comment policyRef="ns12:EnableExperimentation" commentText="$(resource.ns12_EnableExperimentation)"></comment>
+      <comment policyRef="ns13:DownloadMode" commentText="$(resource.ns13_DownloadMode)"></comment>
+      <comment policyRef="ns14:Channel_LogMaxSize_1" commentText="$(resource.ns14_Channel_LogMaxSize_1)"></comment>
+      <comment policyRef="ns14:Channel_LogMaxSize_2" commentText="$(resource.ns14_Channel_LogMaxSize_2)"></comment>
+      <comment policyRef="ns14:Channel_LogMaxSize_3" commentText="$(resource.ns14_Channel_LogMaxSize_3)"></comment>
+      <comment policyRef="ns14:Channel_LogMaxSize_4" commentText="$(resource.ns14_Channel_LogMaxSize_4)"></comment>
+      <comment policyRef="ns14:Channel_Log_Retention_1" commentText="$(resource.ns14_Channel_Log_Retention_1)"></comment>
+      <comment policyRef="ns14:Channel_Log_Retention_2" commentText="$(resource.ns14_Channel_Log_Retention_2)"></comment>
+      <comment policyRef="ns14:Channel_Log_Retention_3" commentText="$(resource.ns14_Channel_Log_Retention_3)"></comment>
+      <comment policyRef="ns14:Channel_Log_Retention_4" commentText="$(resource.ns14_Channel_Log_Retention_4)"></comment>
+      <comment policyRef="ns15:DoNotShowFeedbackNotifications" commentText="$(resource.ns15_DoNotShowFeedbackNotifications)"></comment>
+      <comment policyRef="ns16:AllowInputPersonalization" commentText="$(resource.ns16_AllowInputPersonalization)"></comment>
+      <comment policyRef="ns17:CSE_Registry" commentText="$(resource.ns17_CSE_Registry)"></comment>
+      <comment policyRef="ns17:FontMitigation" commentText="$(resource.ns17_FontMitigation)"></comment>
+      <comment policyRef="ns18:DisableHTTPPrinting_2" commentText="$(resource.ns18_DisableHTTPPrinting_2)"></comment>
+      <comment policyRef="ns18:DisableWebPnPDownload_2" commentText="$(resource.ns18_DisableWebPnPDownload_2)"></comment>
+      <comment policyRef="ns18:SearchCompanion_DisableFileUpdates" commentText="$(resource.ns18_SearchCompanion_DisableFileUpdates)"></comment>
+      <comment policyRef="ns18:ShellPreventWPWDownload_2" commentText="$(resource.ns18_ShellPreventWPWDownload_2)"></comment>
+      <comment policyRef="ns18:ShellRemovePublishToWeb_2" commentText="$(resource.ns18_ShellRemovePublishToWeb_2)"></comment>
+      <comment policyRef="ns18:WinMSG_NoInstrumentation_2" commentText="$(resource.ns18_WinMSG_NoInstrumentation_2)"></comment>
+      <comment policyRef="ns19:Disable_Downloading_of_Enclosures" commentText="$(resource.ns19_Disable_Downloading_of_Enclosures)"></comment>
+      <comment policyRef="ns20:Pol_EnableInsecureGuestLogons" commentText="$(resource.ns20_Pol_EnableInsecureGuestLogons)"></comment>
+      <comment policyRef="ns21:AlwaysInstallElevated_2" commentText="$(resource.ns21_AlwaysInstallElevated_2)"></comment>
+      <comment policyRef="ns21:EnableUserControl" commentText="$(resource.ns21_EnableUserControl)"></comment>
+      <comment policyRef="ns22:AllowInPrivate" commentText="$(resource.ns22_AllowInPrivate)"></comment>
+      <comment policyRef="ns22:AllowPasswordManager" commentText="$(resource.ns22_AllowPasswordManager)"></comment>
+      <comment policyRef="ns22:AllowSearchSuggestionsinAddressBar" commentText="$(resource.ns22_AllowSearchSuggestionsinAddressBar)"></comment>
+      <comment policyRef="ns22:AllowSmartScreen" commentText="$(resource.ns22_AllowSmartScreen)"></comment>
+      <comment policyRef="ns22:Cookies" commentText="$(resource.ns22_Cookies)"></comment>
+      <comment policyRef="ns22:HideLocalHostIPAddress" commentText="$(resource.ns22_HideLocalHostIPAddress)"></comment>
+      <comment policyRef="ns22:PreventSmartScreenPromptOverride" commentText="$(resource.ns22_PreventSmartScreenPromptOverride)"></comment>
+      <comment policyRef="ns22:PreventSmartScreenPromptOverrideForFiles" commentText="$(resource.ns22_PreventSmartScreenPromptOverrideForFiles)"></comment>
+      <comment policyRef="ns23:NC_AllowNetBridge_NLA" commentText="$(resource.ns23_NC_AllowNetBridge_NLA)"></comment>
+      <comment policyRef="ns23:NC_StdDomainUserSetLocation" commentText="$(resource.ns23_NC_StdDomainUserSetLocation)"></comment>
+      <comment policyRef="ns24:Pol_HardenedPaths" commentText="$(resource.ns24_Pol_HardenedPaths)"></comment>
+      <comment policyRef="ns25:DisableHomeGroup" commentText="$(resource.ns25_DisableHomeGroup)"></comment>
+      <comment policyRef="ns26:PreventOnedriveFileSync" commentText="$(resource.ns26_PreventOnedriveFileSync)"></comment>
+      <comment policyRef="ns27:ACPromptForPasswordOnResume_2" commentText="$(resource.ns27_ACPromptForPasswordOnResume_2)"></comment>
+      <comment policyRef="ns27:DCPromptForPasswordOnResume_2" commentText="$(resource.ns27_DCPromptForPasswordOnResume_2)"></comment>
+      <comment policyRef="ns28:EnableScriptBlockLogging" commentText="$(resource.ns28_EnableScriptBlockLogging)"></comment>
+      <comment policyRef="ns28:EnableTranscripting" commentText="$(resource.ns28_EnableTranscripting)"></comment>
+      <comment policyRef="ns29:Pol_PtH_LATFP" commentText="$(resource.ns29_Pol_PtH_LATFP)"></comment>
+      <comment policyRef="ns29:Pol_PtH_WDigestAuthn" commentText="$(resource.ns29_Pol_PtH_WDigestAuthn)"></comment>
+      <comment policyRef="ns30:RA_Solicit" commentText="$(resource.ns30_RA_Solicit)"></comment>
+      <comment policyRef="ns30:RA_Unsolicit" commentText="$(resource.ns30_RA_Unsolicit)"></comment>
+      <comment policyRef="ns31:RpcEnableAuthEpResolution" commentText="$(resource.ns31_RpcEnableAuthEpResolution)"></comment>
+      <comment policyRef="ns31:RpcRestrictRemoteClients" commentText="$(resource.ns31_RpcRestrictRemoteClients)"></comment>
+      <comment policyRef="ns32:TS_CLIENT_DISABLE_PASSWORD_SAVING_2" commentText="$(resource.ns32_TS_CLIENT_DISABLE_PASSWORD_SAVING_2)"></comment>
+      <comment policyRef="ns32:TS_CLIENT_DRIVE_M" commentText="$(resource.ns32_TS_CLIENT_DRIVE_M)"></comment>
+      <comment policyRef="ns32:TS_ENCRYPTION_POLICY" commentText="$(resource.ns32_TS_ENCRYPTION_POLICY)"></comment>
+      <comment policyRef="ns32:TS_PASSWORD" commentText="$(resource.ns32_TS_PASSWORD)"></comment>
+      <comment policyRef="ns32:TS_RPC_ENCRYPTION" commentText="$(resource.ns32_TS_RPC_ENCRYPTION)"></comment>
+      <comment policyRef="ns32:TS_TEMP_DELETE" commentText="$(resource.ns32_TS_TEMP_DELETE)"></comment>
+      <comment policyRef="ns32:TS_TEMP_PER_SESSION" commentText="$(resource.ns32_TS_TEMP_PER_SESSION)"></comment>
+      <comment policyRef="ns33:WCM_BlockNonDomain" commentText="$(resource.ns33_WCM_BlockNonDomain)"></comment>
+      <comment policyRef="ns33:WCM_MinimizeConnections" commentText="$(resource.ns33_WCM_MinimizeConnections)"></comment>
+      <comment policyRef="ns34:SpynetReporting" commentText="$(resource.ns34_SpynetReporting)"></comment>
+      <comment policyRef="ns35:EnableSmartScreen" commentText="$(resource.ns35_EnableSmartScreen)"></comment>
+      <comment policyRef="ns35:ShellProtocolProtectedModeTitle_2" commentText="$(resource.ns35_ShellProtocolProtectedModeTitle_2)"></comment>
+      <comment policyRef="ns36:NoDataExecutionPrevention" commentText="$(resource.ns36_NoDataExecutionPrevention)"></comment>
+      <comment policyRef="ns36:NoHeapTerminationOnCorruption" commentText="$(resource.ns36_NoHeapTerminationOnCorruption)"></comment>
+      <comment policyRef="ns37:DisableLockScreenAppNotifications" commentText="$(resource.ns37_DisableLockScreenAppNotifications)"></comment>
+      <comment policyRef="ns37:DontDisplayNetworkSelectionUI" commentText="$(resource.ns37_DontDisplayNetworkSelectionUI)"></comment>
+      <comment policyRef="ns37:DontEnumerateConnectedUsers" commentText="$(resource.ns37_DontEnumerateConnectedUsers)"></comment>
+      <comment policyRef="ns37:EnumerateLocalUsers" commentText="$(resource.ns37_EnumerateLocalUsers)"></comment>
+      <comment policyRef="ns38:AutomaticRestartSignOn" commentText="$(resource.ns38_AutomaticRestartSignOn)"></comment>
+      <comment policyRef="ns39:AllowAutoConfig" commentText="$(resource.ns39_AllowAutoConfig)"></comment>
+      <comment policyRef="ns39:AllowBasic_1" commentText="$(resource.ns39_AllowBasic_1)"></comment>
+      <comment policyRef="ns39:AllowBasic_2" commentText="$(resource.ns39_AllowBasic_2)"></comment>
+      <comment policyRef="ns39:AllowUnencrypted_1" commentText="$(resource.ns39_AllowUnencrypted_1)"></comment>
+      <comment policyRef="ns39:AllowUnencrypted_2" commentText="$(resource.ns39_AllowUnencrypted_2)"></comment>
+      <comment policyRef="ns39:DisableRunAs" commentText="$(resource.ns39_DisableRunAs)"></comment>
+      <comment policyRef="ns39:DisallowDigest" commentText="$(resource.ns39_DisallowDigest)"></comment>
+      <comment policyRef="ns40:DisableAutoInstall" commentText="$(resource.ns40_DisableAutoInstall)"></comment>
+      <comment policyRef="ns40:DisableOSUpgrade_2" commentText="$(resource.ns40_DisableOSUpgrade_2)"></comment>
+      <comment policyRef="ns41:AUDontShowUasPolicy" commentText="$(resource.ns41_AUDontShowUasPolicy)"></comment>
+      <comment policyRef="ns41:AUNoUasDefaultPolicy_Mach" commentText="$(resource.ns41_AUNoUasDefaultPolicy_Mach)"></comment>
+      <comment policyRef="ns41:AutoUpdateCfg" commentText="$(resource.ns41_AutoUpdateCfg)"></comment>
+      <comment policyRef="ns41:NoAutoRebootWithLoggedOnUsers_Title" commentText="$(resource.ns41_NoAutoRebootWithLoggedOnUsers_Title)"></comment>
+      <comment policyRef="ns41:RescheduleWaitTime_Title" commentText="$(resource.ns41_RescheduleWaitTime_Title)"></comment>
+      <comment policyRef="ns42:WiFiSense" commentText="$(resource.ns42_WiFiSense)"></comment>
+    </admTemplate>
+  </comments>
+  <resources minRequiredRevision="1.0">
+    <stringTable>
+      <string id="ns0_POL_DriverLoadPolicy_Name">This policy setting helps reduce the impact of malware that has already infected your system.</string>
+      <string id="ns1_AllowCortana">If Cortana is enabled, sensitive information could be contained in search history and sent out to Microsoft.</string>
+      <string id="ns1_AllowIndexingEncryptedStoresOrItems">Indexing and allowing users to search encrypted files could potentially reveal confidential data stored within the encrypted files.</string>
+      <string id="ns1_AllowSearchToUseLocation">In an Enterprise having Cortana and Search having access to location is unnecessary. Organizations may not want this information shared out.</string>
+      <string id="ns2_POL_AdmPwd">Due to the difficulty in managing local Administrator passwords, many organizations choose to use the same password on all workstations and/or member servers when deploying them. This poses a serious attack surface security risk because if an attacker manages to compromise one system and learn the password to its local Administrator account, then they can leverage that account to instantly gain access to all other computers that also use that password for their local Administrator account.</string>
+      <string id="ns2_POL_AdmPwd_AdminName">Administrative account is renamed, this setting ensures the correct account is updated.</string>
+      <string id="ns2_POL_AdmPwd_DontAllowPwdExpirationBehindPolicy">Due to the difficulty in managing local Administrator passwords, many organizations choose to use the same password on all workstations and/or member servers when deploying them. This poses a serious attack surface security risk because if an attacker manages to compromise one system and learn the password to its local Administrator account, then they can leverage that account to instantly gain access to all other computers that also use that password for their local Administrator account.</string>
+      <string id="ns2_POL_AdmPwd_Enabled">Due to the difficulty in managing local Administrator passwords, many organizations choose to use the same password on all workstations and/or member servers when deploying them. This poses a serious attack surface security risk because if an attacker manages to compromise one system and learn the password to its local Administrator account, then they can leverage that account to instantly gain access to all other computers that also use that password for their local Administrator account.</string>
+      <string id="ns3_AllowBuildPreview">It can be dangerous in an Enterprise environment if experimental features are allowed because this can introduce bugs and security holes into systems allowing an attacker to gain access.</string>
+      <string id="ns4_AppxRuntimeMicrosoftAccountsOptional">Enabling this setting allows an organization to their enterprise user accounts vice 
+Microsoft accounts when access Windows store apps. This provides the organization with greater control over relevant credentials</string>
+      <string id="ns5_IncludeCmdLine">When this policy setting is enabled, any user who has read access to the security events can read the command-line arguments for any successfully created process. Command-line arguments may contain sensitive or private information such as passwords or user data.</string>
+      <string id="ns6_Autorun">An attacker could use this feature to launch a program to damage a client computer or data on the computer</string>
+      <string id="ns6_NoAutoplayfornonVolume">An attacker could use this feature to launch a program to damage a client computer or data on the computer.</string>
+      <string id="ns6_NoAutorun">Prior to Windows Vista, when media containing an autorun command is inserted, the system will automatically execute the program without user intervention. This creates a major security concern as code may be executed without user's knowledge. The default behavior starting with Windows Vista is to prompt the user whether autorun command is to be run. The autorun command is represented as a handler in the Autoplay dialog.</string>
+      <string id="ns7_Face_EnhancedAntiSpoofing">Prior to Windows Vista, when media containing an autorun command is inserted, the system will automatically execute the program without user intervention. This creates a major security concern as code may be executed without user's knowledge. The default behavior starting with Windows Vista is to prompt the user whether autorun command is to be run. The autorun command is represented as a handler in the Autoplay dialog.</string>
+      <string id="ns8_DisableWindowsConsumerFeatures">Having apps silently installed in an environment is not good security practice - especially if the apps send data back to a 3rd party.</string>
+      <string id="ns9_CPL_Personalization_NoLockScreenCamera">Disabling the lock screen camera extends the protection afforded by the lock screen to camera features.</string>
+      <string id="ns9_CPL_Personalization_NoLockScreenSlideshow">Disabling the lock screen slide show extends the protection afforded by the lock screen to slide show contents.</string>
+      <string id="ns10_AllowDomainPINLogon">A PIN are created from a much smaller selection of characters than a password, so in most cases a PIN will be much less robust than a password</string>
+      <string id="ns11_DisablePasswordReveal">This is a useful feature when entering a long and complex password, especially when using a touchscreen. The potential risk is that someone else may see your password while surreptitiously observing your screen.</string>
+      <string id="ns11_EnumerateAdministrators">Users could see the list of administrator accounts, making it slightly easier for a malicious user who has logged onto a console session to try to crack the passwords of those accounts</string>
+      <string id="ns12_AllowTelemetry">Sending any data to a 3rd party vendor is a security concern and should only be done on an as needed basis.</string>
+      <string id="ns12_EnableExperimentation">It can be dangerous in an Enterprise environment if experimental features are allowed because this can introduce bugs and security holes into systems, making it easier for an attacker to gain access.</string>
+      <string id="ns13_DownloadMode">Due to privacy concerns and security risks, updates should only be downloaded from a trusted machine on the internal network that received its updates from a trusted source and approved by the network administrator.</string>
+      <string id="ns14_Channel_LogMaxSize_1">If events are not recorded it may be difficult or impossible to determine the root cause of system problems or the unauthorized activities of malicious users</string>
+      <string id="ns14_Channel_LogMaxSize_2">If events are not recorded it may be difficult or impossible to determine the root cause of system problems or the unauthorized activities of malicious users</string>
+      <string id="ns14_Channel_LogMaxSize_3">If events are not recorded it may be difficult or impossible to determine the root cause of system problems or the unauthorized activities of malicious users</string>
+      <string id="ns14_Channel_LogMaxSize_4">If events are not recorded it may be difficult or impossible to determine the root cause of system problems or the unauthorized activities of malicious users</string>
+      <string id="ns14_Channel_Log_Retention_1">If new events are not recorded it may be difficult or impossible to determine the root cause of system problems or the unauthorized activities of malicious users</string>
+      <string id="ns14_Channel_Log_Retention_2">If new events are not recorded it may be difficult or impossible to determine the root cause of system problems or the unauthorized activities of malicious users</string>
+      <string id="ns14_Channel_Log_Retention_3">If new events are not recorded it may be difficult or impossible to determine the root cause of system problems or the unauthorized activities of malicious users</string>
+      <string id="ns14_Channel_Log_Retention_4">If new events are not recorded it may be difficult or impossible to determine the root cause of system problems or the unauthorized activities of malicious users</string>
+      <string id="ns15_DoNotShowFeedbackNotifications">In an enterprise environment users should not be sending any feedback to 3rd party vendors.</string>
+      <string id="ns16_AllowInputPersonalization">If this setting is Enabled sensitive information could be stored in the cloud or sent to Microsoft.</string>
+      <string id="ns17_CSE_Registry">Setting this option to true (checked) will ensure unauthorized changes that might have been configured locally are forced to match the domain based Group Policy settings again.</string>
+      <string id="ns17_FontMitigation">Blocking untrusted fonts helps prevent both remote (web-based or email-based) and local EOP attacks that can happen during the font file-parsing process.</string>
+      <string id="ns18_DisableHTTPPrinting_2">Information that is transmitted over HTTP through this capability is not protected and can be intercepted by malicious users. For this reason, it is not often used in enterprise environments</string>
+      <string id="ns18_DisableWebPnPDownload_2">Users might download drivers that include malicious code</string>
+      <string id="ns18_SearchCompanion_DisableFileUpdates">There is a small risk that users will unknowingly reveal sensitive information because of the topics they are searching for. This risk is very low because even if this setting is enabled users still must submit search queries to the desired search engine in order to perform searches</string>
+      <string id="ns18_ShellPreventWPWDownload_2">Although the risk is minimal, enabling this setting will reduce the possibility of a user unknowingly downloading malicious content through this feature</string>
+      <string id="ns18_ShellRemovePublishToWeb_2">Users may publish confidential or sensitive information to a public service outside of the control of the organization</string>
+      <string id="ns18_WinMSG_NoInstrumentation_2">Large enterprise environments may not want to have information collected from managed client computers</string>
+      <string id="ns19_Disable_Downloading_of_Enclosures">Allowing attachments to be downloaded through the RSS feed can introduce files that could have malicious intent.</string>
+      <string id="ns20_Pol_EnableInsecureGuestLogons">Insecure guest logons are used by file servers to allow unauthenticated access to shared folders.</string>
+      <string id="ns21_AlwaysInstallElevated_2">Users with limited privileges can exploit this feature by creating a Windows Installer installation package that creates a new local account that belongs to the local built-in Administrators group, adds their current account to the local built-in Administrators group, installs malicious software, or performs other unauthorized activities.</string>
+      <string id="ns21_EnableUserControl">In an Enterprise environment, only IT staff with administrative rights should be installing or changing software on a system. Allowing users the ability can risk unapproved software from being installed our removed from a system which could cause the system to become
+vulnerable.</string>
+      <string id="ns22_AllowInPrivate">Even though web filter logs can monitor traffic to and from websites, it is always a good practice to try and keep multiple source of logs. It can also be helpful to keep user from privately browsing in order to troubleshoot malicious site visits if a machine has become compromised.</string>
+      <string id="ns22_AllowPasswordManager">Using Password Manager can potentially makes it easier for an unauthorized user who gains access to the user’s desktop (including a coworker who sits down at a user’s desk soon after the user walks away and forgets to lock their workstation), to log in to sites as the user, without needing to know or enter the password</string>
+      <string id="ns22_AllowSearchSuggestionsinAddressBar">Having search suggestions sent out to be processed is considered a privacy concern.</string>
+      <string id="ns22_AllowSmartScreen">SmartScreen serves an important purpose as it helps to warn users of possible malicious sites and files. Allowing users to turn off this setting can make the browser become more vulnerable to compromise.</string>
+      <string id="ns22_Cookies">Cookies can pose a serious privacy concern, many websites depend on them for operation. It is recommended when possible to block 3rd party cookies in order to reduce tracking.</string>
+      <string id="ns22_HideLocalHostIPAddress">WebRTC is a Real-Time Communications open source project supported by all major browsers. Allowing a system's local IP address to be shared may be considered a privacy concern.</string>
+      <string id="ns22_PreventSmartScreenPromptOverride">SmartScreen will warn a user is a website or file is potentially malicious. Enabling this setting prevents these warnings from being bypassed.</string>
+      <string id="ns22_PreventSmartScreenPromptOverrideForFiles">SmartScreen will warn a user is a website or file is potentially malicious. Enabling this setting prevents these warnings from being bypassed.</string>
+      <string id="ns23_NC_AllowNetBridge_NLA">Allowing users to create a network bridge increases the risk and attack surface from the bridged network.</string>
+      <string id="ns23_NC_StdDomainUserSetLocation">Allowing regular users to set a network location increases the risk and attack surface.</string>
+      <string id="ns24_Pol_HardenedPaths">In February 2015, Microsoft released a new control mechanism to mitigate a security risk in Group Policy as part of MS15-011 / MSKB 3000483. This mechanism requires both the installation of the new security update and also the deployment of specific group policy settings to all computers on the domain from Vista/Server 2008 or higher (the associated security patch to enable this feature was not released for Server 2003). A new group policy template (NetworkProvider.admx/adml) was also provided with the security update.
+
+Once the new GPO template is in place, the following are the minimum requirements to remediate the Group Policy security risk:
+\\*\NETLOGON RequireMutualAuthentication=1, RequireIntegrity=1
+\\*\SYSVOL RequireMutualAuthentication=1, RequireIntegrity=1</string>
+      <string id="ns25_DisableHomeGroup">By default, domain joined computers can be joined to a HomeGroup. While resources on a domain-joined computer cannot be shared to the HomeGroup, information from the domain-joined computer can be leaked to other computers in the HomeGroup</string>
+      <string id="ns26_PreventOnedriveFileSync">Enabling this setting prevents users from accidentally uploading confidential or sensitive corporate information to OneDrive cloud service.</string>
+      <string id="ns27_ACPromptForPasswordOnResume_2">Enabling this setting ensures that anyone who wakes an unattended computer from sleep state will have to provide logon credentials before they can access the system</string>
+      <string id="ns27_DCPromptForPasswordOnResume_2">Enabling this setting ensures that anyone who wakes an unattended computer from sleep state will have to provide logon credentials before they can access the system</string>
+      <string id="ns28_EnableScriptBlockLogging">Due to the potential risks of capturing passwords in the logs. This setting should only be needed for debugging purposes, and not in normal operation, it is important to ensure this is set to Disabled.</string>
+      <string id="ns28_EnableTranscripting">If this setting is enabled there is a risk that passwords could get stored in plain text in the PowerShell_transcript output file.</string>
+      <string id="ns29_Pol_PtH_LATFP">Local accounts are at high risk for credential theft when the same account and password is configured on multiple systems. Ensuring this policy is Enabled significantly reduces that risk.</string>
+      <string id="ns29_Pol_PtH_WDigestAuthn">Preventing the plaintext storage of credentials in memory may reduce opportunity for credential theft.</string>
+      <string id="ns30_RA_Solicit">There is slight risk that a rogue administrator will gain access to another user's desktop session, however, they cannot connect to a user's computer unannounced or control it without permission from the user. When an expert tries to connect, the user can still choose to deny the connection or give the expert view-only privileges. The user must explicitly click the Yes button to allow the expert to remotely control the workstation.</string>
+      <string id="ns30_RA_Unsolicit">A user might be tricked and accept an unsolicited Remote Assistance offer from a malicious user</string>
+      <string id="ns31_RpcEnableAuthEpResolution">Anonymous access to RPC services could result in accidental disclosure of information to unauthenticated users</string>
+      <string id="ns31_RpcRestrictRemoteClients">Unauthenticated RPC communication can create a security vulnerability</string>
+      <string id="ns32_TS_CLIENT_DISABLE_PASSWORD_SAVING_2">An attacker with physical access to the computer may be able to break the protection guarding saved passwords. An attacker who compromises a user's account and connects to their computer could use saved passwords to gain access to additional hosts.</string>
+      <string id="ns32_TS_CLIENT_DRIVE_M">Data could be forwarded from the user's Terminal Server session to the user's local computer without any direct user interaction.</string>
+      <string id="ns32_TS_ENCRYPTION_POLICY">If Terminal Server client connections are allowed that use low level encryption, it is more likely that an attacker will be able to decrypt any captured Terminal Services network traffic</string>
+      <string id="ns32_TS_PASSWORD">Users have the option to store both their username and password when they create a new Remote Desktop connection shortcut. If the server that runs Terminal Services allows users who have used this feature to log on to the server but not enter their password, then it is possible that an attacker who has gained physical access to the user's computer could connect to a Terminal Server through the Remote Desktop connection shortcut, even though they may not know the user's password.</string>
+      <string id="ns32_TS_RPC_ENCRYPTION">Allowing unsecure RPC communication can exposes the server to man in the middle attacks and data disclosure attacks.</string>
+      <string id="ns32_TS_TEMP_DELETE">Sensitive information could be contained inside the temporary folders and shared with other administrators that log into the system.</string>
+      <string id="ns32_TS_TEMP_PER_SESSION">By Disabling this setting you are keeping the cached data independent for each session, both reducing the chance of problems from shared cached data between sessions, and keeping possibly sensitive data separate to each user session.</string>
+      <string id="ns33_WCM_BlockNonDomain">The potential concern is that a user would unknowingly allow network traffic to flow between the insecure public network and the managed corporate network.</string>
+      <string id="ns33_WCM_MinimizeConnections">Blocking simultaneous connections can help prevent a user unknowingly allowing network traffic to flow between the Internet and the corporate network.</string>
+      <string id="ns34_SpynetReporting">This information can include things like location of detected items on your computer if harmful software was removed. The information will be automatically collected and sent. In some instances personal information might unintentionally be sent to Microsoft. However Microsoft will not use this information to identify you or contact you.</string>
+      <string id="ns35_EnableSmartScreen">Windows SmartScreen helps keep PCs safer by warning users before running unrecognized programs downloaded from the Internet. However, due to the fact that some information is sent to Microsoft about files and programs run on PCs some organizations may prefer to disable it</string>
+      <string id="ns35_ShellProtocolProtectedModeTitle_2">Limiting the opening of files and folders to a limited set reduces the attack surface of the system.</string>
+      <string id="ns36_NoDataExecutionPrevention">Enabling this policy setting may allow certain legacy plug-in applications to function. Disabling this policy setting will ensure that DataExecution Prevention blocks certain types of malware from exploiting Explorer</string>
+      <string id="ns36_NoHeapTerminationOnCorruption">Allowing an application to function after its session has become corrupt increases the risk posture to the system.</string>
+      <string id="ns37_DisableLockScreenAppNotifications">App notifications might display sensitive business or personal data.</string>
+      <string id="ns37_DontDisplayNetworkSelectionUI">An unauthorized user could disconnect the PC from the network or can connect the PC to other available networks without signing into Windows</string>
+      <string id="ns37_DontEnumerateConnectedUsers">A malicious user could use this feature to gather account names of other users, that information could then be used in conjunction with other types of attacks such as guessing passwords or social engineering. The value of this countermeasure is small because a user with domain credentials could gather the same account information using other methods</string>
+      <string id="ns37_EnumerateLocalUsers">A  malicious user could use this feature to gather account names of other users, that information could then be used in conjunction with other types of attacks such as guessing passwords or social engineering. The value of this countermeasure is small because a user with domain credentials could gather the same account information using other methods</string>
+      <string id="ns38_AutomaticRestartSignOn">Disabling this feature will prevent the caching of user's credentials and unauthorized use of the device, and also ensure the user is aware of the restart</string>
+      <string id="ns39_AllowAutoConfig">Allows remote managment using PowerShell</string>
+      <string id="ns39_AllowBasic_1">Basic authentication is less robust than other authentication methods available in WinRM becuase credentials including passwords are transmitted in plain text. An attacker who is able to capture packets on the network where WinRM is running may be able to determine the credentials used for accessing remote hosts via WinRM</string>
+      <string id="ns39_AllowBasic_2">Basic authentication is less robust than other authentication methods available in WinRM becuase credentials including passwords are transmitted in plain text. An attacker who is able to capture packets on the network where WinRM is running may be able to determine the credentials used for accessing remote hosts via WinRM</string>
+      <string id="ns39_AllowUnencrypted_1">Encrypting WinRM network traffic reduces the risk of an attacker viewing or modifying WinRM messages as they transit the network</string>
+      <string id="ns39_AllowUnencrypted_2">Encrypting WinRM network traffic reduces the risk of an attacker viewing or modifying WinRM messages as they transit the network</string>
+      <string id="ns39_DisableRunAs">Although the ability to store RunAs credentials is a convenient feature it increases the risk of account compromise slightly. For example, if you forget to lock your desktop before leaving it unattended for a few minutes another person could access not only the desktop of your computer but also any hosts you manage via WinRM with cached RunAs credentials</string>
+      <string id="ns39_DisallowDigest">Digest authentication is less robust than other authentication methods availabl
+e in WinRM, an attacker who is able to capture packets on the network where WinRM is running may be able to determine the credentials used for accessing remote hosts via WinRM</string>
+      <string id="ns40_DisableAutoInstall">Keeping your system properly patched can help protect against 0 day vulnerabilities.</string>
+      <string id="ns40_DisableOSUpgrade_2">Unplanned OS upgrades can lead to more preventable support calls. IT should be pushing only approved updates to the machine.</string>
+      <string id="ns41_AUDontShowUasPolicy">Updates are important for maintaining the ongoing security of a computer, therefore this setting should not be enabled.</string>
+      <string id="ns41_AUNoUasDefaultPolicy_Mach">Updates are important for maintaining the ongoing security of a computer, therefore this setting should not be enabled.</string>
+      <string id="ns41_AutoUpdateCfg">Although each version of Windows is thoroughly tested before release, it is possible that problems will be discovered after the products are shipped. The Configure Automatic Updates setting can help you ensure that the computers in your environment will always have the most recent critical operating system updates and service packs installed</string>
+      <string id="ns41_NoAutoRebootWithLoggedOnUsers_Title">Updates are important for maintaining the ongoing security of a computer, therefore this setting should not be enabled.</string>
+      <string id="ns41_RescheduleWaitTime_Title">Rescheduling automatic updates that were not installed on schedule will help ensure security patches get installed</string>
+      <string id="ns42_WiFiSense">Automatically connecting to an open hotspot or network can introduce the system to a rogue network with malicious intent.</string>
+    </stringTable>
+  </resources>
+</policyComments>

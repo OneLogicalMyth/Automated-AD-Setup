@@ -9,7 +9,6 @@ Desktop.ini
 $RECYCLE.BIN/
 Migration Tools/
 Governance Scripts/
-Config Files/Group Policy/
 
 # Windows Installer files
 *.cab
@@ -49,7 +48,6 @@ Network Trash Folder
 Temporary Items
 .apdisk
 *.csv
-Config Files/GroupPolicy.xml
 Functions/New-RBACRole.ps1
 Scripts/99-PromoteOtherDCs.ps1
 Config Files/DefaultGroups.xml

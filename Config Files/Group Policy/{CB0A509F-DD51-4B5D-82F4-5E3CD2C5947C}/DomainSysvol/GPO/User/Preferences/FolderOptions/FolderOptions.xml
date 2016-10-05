@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FolderOptions clsid="{8AB5F5D7-F676-48ab-A94E-1186E120EFDC}"><GlobalFolderOptionsVista clsid="{DBF1E3CD-4CA2-407c-BE84-5F67D3BE754D}" name="Folder Options (At least Windows Vista)" changed="2015-09-23 09:50:10" uid="{76763D05-A7A5-4623-8C83-A13E07147E3E}" userContext="1" removePolicy="0"><Filters><FilterCollection hidden="1" bool="AND" not="0"><FilterOs hidden="1" not="1" bool="AND" class="NT" version="XP" type="NE" edition="NE" sp="NE"/><FilterOs hidden="1" not="1" bool="AND" class="NT" version="2K3" type="NE" edition="NE" sp="NE"/><FilterOs hidden="1" not="1" bool="AND" class="NT" version="2K3R2" type="NE" edition="NE" sp="NE"/></FilterCollection></Filters><Properties hideFileExt="0"/></GlobalFolderOptionsVista>
+</FolderOptions>

@@ -1,0 +1,62 @@
+<GroupPolicy>
+	<GPO>
+		<Name>LIVE-New_Machine_Restrictions-C</Name>
+		<LinksTo>
+			<Link>OU=New Machines,OU=Administrative</Link>
+		</LinksTo>
+		<BackupID>{1C8C8D8D-E2A0-4606-AE1F-70F9807573D8}</BackupID>
+	</GPO>
+ 	<GPO>
+		<Name>LIVE-Server-C</Name>
+		<LinksTo>
+			<Link>OU=Servers,OU=Live</Link>
+		</LinksTo>
+		<BackupID>{1C8C8D8D-E2A0-4606-AE1F-70F9807573D8}</BackupID>
+	</GPO>
+ 	<GPO>
+		<Name>BOTH-People-U</Name>
+		<LinksTo>
+			<Link>OU=People,OU=Live</Link>
+			<Link>OU=People,OU=Test</Link>
+		</LinksTo>
+		<BackupID>{1C8C8D8D-E2A0-4606-AE1F-70F9807573D8}</BackupID>
+	</GPO>
+ 	<GPO>
+		<Name>Default Domain Policy</Name>
+		<LinksTo />
+		<BackupID>{1C8C8D8D-E2A0-4606-AE1F-70F9807573D8}</BackupID>
+	</GPO>
+ 	<GPO>
+		<Name>LIVE-Client_Devices-C</Name>
+		<LinksTo>
+			<Link>OU=Client Devices,OU=Live</Link>
+		</LinksTo>
+		<BackupID>{1C8C8D8D-E2A0-4606-AE1F-70F9807573D8}</BackupID>
+	</GPO>
+ 	<GPO>
+		<Name>LIVE-Admin_Users-U</Name>
+		<LinksTo>
+			<Link>OU=Admins,OU=Administrative</Link>
+		</LinksTo>
+		<BackupID>{1C8C8D8D-E2A0-4606-AE1F-70F9807573D8}</BackupID>
+	</GPO>
+ 	<GPO>
+		<Name>TEST-Server-C</Name>
+		<LinksTo>
+			<Link>OU=Servers,OU=Test</Link>
+		</LinksTo>
+		<BackupID>{1C8C8D8D-E2A0-4606-AE1F-70F9807573D8}</BackupID>
+	</GPO>
+ 	<GPO>
+		<Name>Default Domain Controllers Policy</Name>
+		<LinksTo />
+		<BackupID>{1C8C8D8D-E2A0-4606-AE1F-70F9807573D8}</BackupID>
+	</GPO>
+ 	<GPO>
+		<Name>TEST-Client_Devices-C</Name>
+		<LinksTo>
+			<Link>OU=Client Devices,OU=Test</Link>
+		</LinksTo>
+		<BackupID>{1C8C8D8D-E2A0-4606-AE1F-70F9807573D8}</BackupID>
+	</GPO>
+</GroupPolicy>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Copyright (c) Microsoft Corporation.  All rights reserved. --><GroupPolicyBackupScheme bkp:version="2.0" bkp:type="GroupPolicyBackupTemplate" xmlns:bkp="http://www.microsoft.com/GroupPolicy/GPOOperations" xmlns="http://www.microsoft.com/GroupPolicy/GPOOperations">
+    <GroupPolicyObject><SecurityGroups><Group bkp:Source="FromDACL"><Sid><![CDATA[S-1-5-21-2359395786-3044762293-1017408396-519]]></Sid><SamAccountName><![CDATA[Enterprise Admins]]></SamAccountName><Type><![CDATA[UniversalGroup]]></Type><NetBIOSDomainName><![CDATA[EXAMPLE]]></NetBIOSDomainName><DnsDomainName><![CDATA[ad.example.com]]></DnsDomainName><UPN><![CDATA[Enterprise Admins@ad.example.com]]></UPN></Group><Group bkp:Source="FromDACL"><Sid><![CDATA[S-1-5-21-2359395786-3044762293-1017408396-512]]></Sid><SamAccountName><![CDATA[Domain Admins]]></SamAccountName><Type><![CDATA[GlobalGroup]]></Type><NetBIOSDomainName><![CDATA[EXAMPLE]]></NetBIOSDomainName><DnsDomainName><![CDATA[ad.example.com]]></DnsDomainName><UPN><![CDATA[Domain Admins@ad.example.com]]></UPN></Group></SecurityGroups><FilePaths/><GroupPolicyCoreSettings><ID><![CDATA[{A9993BF3-E1A8-4A4D-83FB-612370EE437A}]]></ID><Domain><![CDATA[ad.example.com]]></Domain><SecurityDescriptor>01 00 04 9c 00 00 00 00 00 00 00 00 00 00 00 00 14 00 00 00 04 00 ec 00 08 00 00 00 05 02 28 00 00 01 00 00 01 00 00 00 8f fd ac ed b3 ff d1 11 b4 1d 00 a0 c9 68 f9 39 01 01 00 00 00 00 00 05 0b 00 00 00 00 00 24 00 ff 00 0f 00 01 05 00 00 00 00 00 05 15 00 00 00 ca 85 a1 8c b5 62 7b b5 8c 6b a4 3c 00 02 00 00 00 02 24 00 ff 00 0f 00 01 05 00 00 00 00 00 05 15 00 00 00 ca 85 a1 8c b5 62 7b b5 8c 6b a4 3c 00 02 00 00 00 02 24 00 ff 00 0f 00 01 05 00 00 00 00 00 05 15 00 00 00 ca 85 a1 8c b5 62 7b b5 8c 6b a4 3c 07 02 00 00 00 02 14 00 94 00 02 00 01 01 00 00 00 00 00 05 09 00 00 00 00 02 14 00 94 00 02 00 01 01 00 00 00 00 00 05 0b 00 00 00 00 02 14 00 ff 00 0f 00 01 01 00 00 00 00 00 05 12 00 00 00 00 0a 14 00 ff 00 0f 00 01 01 00 00 00 00 00 03 00 00 00 00</SecurityDescriptor><DisplayName><![CDATA[BOTH-People-U]]></DisplayName><Options><![CDATA[2]]></Options><UserVersionNumber><![CDATA[262148]]></UserVersionNumber><MachineVersionNumber><![CDATA[65537]]></MachineVersionNumber><MachineExtensionGuids/><UserExtensionGuids><![CDATA[[{35378EAC-683F-11D2-A89A-00C04FBBCFA2}{D02B1F73-3407-48AE-BA88-E8213C6761F1}]]]></UserExtensionGuids><WMIFilter/></GroupPolicyCoreSettings> 
+        <GroupPolicyExtension bkp:ID="{35378EAC-683F-11D2-A89A-00C04FBBCFA2}" bkp:DescName="Registry">
+            
+            <FSObjectFile bkp:Path="%GPO_USER_FSPATH%\registry.pol" bkp:SourceExpandedPath="\\EXAMPLE-DC-01.ad.example.com\sysvol\ad.example.com\Policies\{A9993BF3-E1A8-4A4D-83FB-612370EE437A}\User\registry.pol" bkp:Location="DomainSysvol\GPO\User\registry.pol"/>
+            <FSObjectFile bkp:Path="%GPO_FSPATH%\Adm\*.*" bkp:SourceExpandedPath="\\EXAMPLE-DC-01.ad.example.com\sysvol\ad.example.com\Policies\{A9993BF3-E1A8-4A4D-83FB-612370EE437A}\Adm\*.*"/>
+        </GroupPolicyExtension>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    <GroupPolicyExtension bkp:ID="{F15C46CD-82A0-4C2D-A210-5D0D3182A418}" bkp:DescName="Unknown Extension"><FSObjectFile bkp:Path="%GPO_USER_FSPATH%\comment.cmtx" bkp:SourceExpandedPath="\\EXAMPLE-DC-01.ad.example.com\sysvol\ad.example.com\Policies\{A9993BF3-E1A8-4A4D-83FB-612370EE437A}\User\comment.cmtx" bkp:Location="DomainSysvol\GPO\User\comment.cmtx"/></GroupPolicyExtension></GroupPolicyObject>
+</GroupPolicyBackupScheme>
