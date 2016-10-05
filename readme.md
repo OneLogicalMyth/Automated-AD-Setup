@@ -1,3 +1,5 @@
+# Download
+
 [![Download Beta](https://img.shields.io/badge/Latest%20Stable%20Release-v0.1-green.svg)](https://github.com/OneLogicalMyth/Automated-AD-Setup/archive/v0.1.zip)
 
 # Introduction
