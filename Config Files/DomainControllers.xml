@@ -10,7 +10,7 @@
 			<IP>192.168.1.2</IP>
 			<IP>192.168.1.1</IP>
 		</DNSServers>
-		<RemoveGUI>0</RemoveGUI>
+		<RemoveGUI>1</RemoveGUI>
 	</DC>
 	<DC>
 		<ID>2</ID>
