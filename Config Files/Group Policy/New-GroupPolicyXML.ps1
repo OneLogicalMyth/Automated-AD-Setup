@@ -5,7 +5,7 @@ $XMLs = Get-ChildItem -File -Recurse -Filter gpreport.xml | Select-Object -Expan
 
 $GPOs = Foreach($XML IN $XMLs)
 {
-    $GPOGuid = ((Split-Path $XMLs[0]).split('\') | Select -Last 1).Trim()
+    $GPOGuid = ((Split-Path $XML).split('\') | Select -Last 1).Trim()
     $GPOName = ([xml](Get-Content $XML)).GPO.Name
 
 @"
