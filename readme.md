@@ -1,4 +1,4 @@
-[![GitHub release](https://img.shields.io/github/release/qubyte/rubidium.svg?maxAge=2592000)]()
+[![Download Beta](https://img.shields.io/badge/BETA-v0.1-red.svg)](https://github.com/OneLogicalMyth/Automated-AD-Setup/archive/v0.1.zip)
 
 # Introduction
 
