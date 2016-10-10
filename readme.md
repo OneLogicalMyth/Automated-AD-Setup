@@ -8,6 +8,7 @@ A fully automated AD build script that will configure a domain fully for you.
 
 You just need to adjust the XML files located in the config directory to taste.
 
+Watch the build script in action on YouTube - https://youtu.be/AslU3GtV-4g
 
 # License
 
