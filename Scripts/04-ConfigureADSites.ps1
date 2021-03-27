@@ -37,12 +37,14 @@ New-Item -Path $LogFile -ItemType File -ErrorAction SilentlyContinue | Out-Null
 . (Join-Path $PSScriptRoot '..\Functions\Write-LogEntry.ps1')
 
 #Get configuration
-Write-LogEntry -LogFile $LogFile -Message 'Loading configuration file config.xml from root directory'
-[xml]$ADSites = Get-Content (Join-Path $PSScriptRoot '..\Config Files\ADSites.xml')
+Write-LogEntry -LogFile $LogFile -Message 'Loading configuration file ADSites.xml from Config Files directory'
+
+[System.Xml.XmlDocument]$SitesFile = New-Object System.Xml.XmlDocument
+$SitesFile.load((Join-Path $PSScriptRoot '..\Config Files\ADSites.xml'))
+$ADSites = $SitesFile.SelectNodes("/ADSites/Site")
 
 #Grab the first site on the list
-$FirstSite = $ADSites.ADSites.Site[0]
-$Sites = $ADSites.ADSites.Site
+$FirstSite = $ADSites[0]
 
 #Get default site and rename it to the first one on the list
 Write-LogEntry -LogFile $LogFile -Message "If 'Default-First-Site-Name' is present it will now be renamed to '$($FirstSite.Name)' at location '$($FirstSite.Location)'"
@@ -51,7 +53,7 @@ if(Test-ADSite 'Default-First-Site-Name'){
 }
 
 #Loop through each site and create it if not present then assign subnets
-Foreach($Site IN $Sites){
+Foreach($Site IN $ADSites){
 
 	Write-LogEntry -LogFile $LogFile -Message "Processing AD site named '$($Site.Name)'"
 
